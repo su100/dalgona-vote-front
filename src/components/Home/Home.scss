@@ -1,4 +1,85 @@
 @import "styles/base.scss";
 
 .home {
+    padding-bottom: 60px;
+    .section {
+        margin: 0 auto;
+        margin-top: 78px;
+        h1 {
+            margin: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 60px;
+            text-align: center;
+            background: -webkit-linear-gradient(#ffc02e, #fff780);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .intro {
+        width: 900px;
+        height: 413px;
+        .description {
+            margin-left: -35px;
+            width: 545px;
+            span {
+                text-align: right;
+                width: inherit;
+                display: inline-block;
+                font-weight: 900;
+                font-size: 40px;
+                &:last-child {
+                    margin-top: 71px;
+                    font-weight: normal;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .hot {
+        .vs {
+            display: inline-block;
+            margin: 0 59px;
+            font-weight: 900;
+            font-size: 45px;
+        }
+    }
+
+    .luna {
+        .vs {
+            display: inline-block;
+            margin: 0 12px;
+            font-weight: 900;
+            font-size: 30px;
+        }
+        .ongoing-tab {
+            text-align: right;
+            margin-bottom: 60px;
+            button {
+                margin-left: 25px;
+                font-family: Roboto;
+                color: #fff;
+                padding: 15px 33px;
+                font-size: 24px;
+                background: rgba(255, 255, 255, 0.01);
+                border: 2px solid #ffffff;
+                box-sizing: border-box;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 42.5px;
+            }
+            .active {
+                color: #000;
+                font-weight: 500;
+                border: none;
+                background: linear-gradient(
+                    151.32deg,
+                    #fbf567 11.86%,
+                    #ffffff 52.08%,
+                    #fbf567 87.56%
+                );
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
 }

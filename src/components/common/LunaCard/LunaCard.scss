@@ -1,0 +1,100 @@
+@import "styles/base.scss";
+
+.luna-card {
+    font-weight: 900;
+    font-size: 20px;
+    .crown {
+        height: 28px;
+        margin-left: -14px;
+        img {
+            filter: drop-shadow(0px 0px 20px #ffffff);
+            transform: rotate(-35deg);
+            width: 53.1px;
+            height: 53.1px;
+        }
+    }
+    .winner {
+        img {
+            box-shadow: 0px 0px 50px #fffba6;
+        }
+    }
+    .card {
+        display: flex;
+        margin-bottom: 13px;
+        width: 199px;
+        height: 313px;
+        border-radius: 50px;
+        img {
+            background: pink;
+            border-radius: inherit;
+            width: 199px;
+            height: 313px;
+        }
+        .card-background {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            opacity: 0;
+            transition: 0.3s;
+            background: linear-gradient(
+                0deg,
+                rgba(129, 129, 129, 0.5),
+                rgba(129, 129, 129, 0.5)
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                transition: 0.3s;
+                display: none;
+            }
+            &:hover {
+                opacity: 1;
+                button {
+                    display: inline-block;
+                    background: rgba(255, 255, 255, 0.01);
+                    border: 2px solid #ffffff;
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    font-weight: 600;
+                    font-size: 27px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .star {
+        display: inline-block;
+        box-sizing: border-box;
+        text-shadow: 0px 0px 10px #ffffff;
+    }
+    .star_filled {
+        display: inline-block;
+        color: #fbf567;
+        text-shadow: 0px 0px 10px #ffffff;
+    }
+
+    &.hot {
+        font-weight: 600;
+        font-size: 30px;
+        .crown {
+            height: 45px;
+            margin-left: -28px;
+            img {
+                width: 86.25px;
+                height: 86.25px;
+            }
+        }
+        .card {
+            width: 270px;
+            height: 423px;
+            margin-bottom: 13px;
+            border-radius: 70px;
+            img {
+                width: 270px;
+                height: 423px;
+            }
+        }
+    }
+}

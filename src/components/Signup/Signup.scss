@@ -1,0 +1,47 @@
+@import "styles/base.scss";
+
+.signup {
+    margin-top: 31px;
+
+    .form {
+        margin-bottom: 95px;
+        .label {
+            display: block;
+            font-weight: 600;
+            font-size: 30px;
+            padding-top: 47px;
+            text-align: left;
+        }
+        input {
+            color: #fff;
+            font-size: 20px;
+            width: 378px;
+            height: 55px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+    .submit {
+        text-align: center;
+        padding-bottom: 75px;
+        button {
+            font-weight: 500;
+            font-size: 30px;
+            width: 507px;
+            height: 90px;
+            color: #000;
+            background: linear-gradient(
+                322.12deg,
+                #fffba6 17.56%,
+                #ffffff 45.37%,
+                #fffba6 68.9%
+            );
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 100px;
+        }
+    }
+}

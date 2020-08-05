@@ -1,9 +1,9 @@
 import React from "react";
 import PageTemplate from "components/common/PageTemplate";
-import HomeContainer from "containers/HomeContainer";
+import MyContainer from "containers/MyContainer";
 import Header from "components/common/Header";
 
-const HomePage = (props) => {
+const MyPage = (props) => {
     return (
         <div>
             <PageTemplate
@@ -15,10 +15,10 @@ const HomePage = (props) => {
                     />
                 }
             >
-                <HomeContainer />
+                <MyContainer />
             </PageTemplate>
         </div>
     );
 };
 
-export default HomePage;
+export default MyPage;

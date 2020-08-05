@@ -1,9 +1,9 @@
 import React from "react";
 import PageTemplate from "components/common/PageTemplate";
-import HomeContainer from "containers/HomeContainer";
+import SignupContainer from "containers/SignupContainer";
 import Header from "components/common/Header";
 
-const HomePage = (props) => {
+const SignupPage = (props) => {
     return (
         <div>
             <PageTemplate
@@ -15,10 +15,10 @@ const HomePage = (props) => {
                     />
                 }
             >
-                <HomeContainer />
+                <SignupContainer />
             </PageTemplate>
         </div>
     );
 };
 
-export default HomePage;
+export default SignupPage;
