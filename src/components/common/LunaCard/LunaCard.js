@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Grid } from "@material-ui/core";
 import crown from "images/crown.png";
 import "./LunaCard.scss";
@@ -12,13 +13,17 @@ function LunaCard({ isHot, winner, img, name, star, count, isUser, isVoted }) {
             <div className={winner ? "card winner" : "card"}>
                 <img src={img} alt="luna" />
                 <div className="card-background">
-                    <button>
-                        {isUser
-                            ? isVoted
-                                ? "투표하기"
-                                : "투표취소"
-                            : "로그인"}
-                    </button>
+                    {isUser ? (
+                        isVoted ? (
+                            <button>투표하기</button>
+                        ) : (
+                            <button>투표취소</button>
+                        )
+                    ) : (
+                        <Link to="/login">
+                            <button>로그인</button>
+                        </Link>
+                    )}
                 </div>
             </div>
             <Grid
