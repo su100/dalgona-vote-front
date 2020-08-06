@@ -5,6 +5,9 @@
         width: 987px;
         font-size: 30px;
         margin-bottom: 91px;
+        &:last-child {
+            margin-bottom: 15;
+        }
         .count {
             width: 150px;
             display: inline-block;

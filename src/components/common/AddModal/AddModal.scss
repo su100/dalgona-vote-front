@@ -1,0 +1,107 @@
+@import "styles/base.scss";
+
+.add-modal {
+    z-index: 100;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 636px;
+    height: 640px;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .title-bar {
+        width: inherit;
+        height: 61px;
+        font-weight: bold;
+        font-size: 25px;
+        background: linear-gradient(90.46deg, #c001c4 0.1%, #6b01c4 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        .title {
+            margin-left: 27px;
+        }
+        .close-button {
+            margin-right: 14px;
+            button {
+                font-weight: normal;
+                font-size: 24px;
+                background: none;
+                color: #fff;
+            }
+        }
+    }
+
+    .contents {
+        margin-top: 44px;
+        width: 488px;
+        height: 420px;
+        border-bottom: 1px solid #e5e5e5;
+        .pic-background {
+            width: 215px;
+            height: 322px;
+            background: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 82px;
+                height: 82px;
+            }
+            .pic-text {
+                font-weight: 500;
+                font-size: 17px;
+                color: #000;
+            }
+        }
+    }
+    .name {
+        margin-top: 20px;
+        .label {
+            margin-right: 20px;
+            font-weight: normal;
+            font-size: 20px;
+            color: #000;
+        }
+        input {
+            width: 155px;
+            height: 43px;
+            font-size: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+    }
+    .button-area {
+        margin: 35px auto;
+        button {
+            width: 89px;
+            height: 45px;
+            font-family: Roboto;
+            font-size: 22px;
+        }
+        .cancel-button {
+            font-weight: normal;
+            color: #000;
+            background: #f7f7f7;
+            border: 0.2px solid #e5e5e5;
+            box-sizing: border-box;
+            border-radius: 35px;
+        }
+        .post-button {
+            margin-left: 14px;
+            background: linear-gradient(
+                130.78deg,
+                #c000c4 14.36%,
+                #5600c4 99.94%
+            );
+            color: #fff;
+            font-weight: bold;
+            border-radius: 29px;
+        }
+    }
+}
