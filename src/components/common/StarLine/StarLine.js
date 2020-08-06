@@ -2,10 +2,10 @@ import React from "react";
 
 import "./StarLine.scss";
 
-function StarLine({ type }) {
+function StarLine({ main }) {
     return (
         <div className="starline">
-            <div className={type === "main" ? "line main" : "line"}>
+            <div className={main ? "line main" : "line"}>
                 <span>★</span>
             </div>
         </div>

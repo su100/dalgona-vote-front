@@ -36,7 +36,7 @@ class Home extends Component {
                 </div>
                 <div className="section hot">
                     <h1>NOW HOT</h1>
-                    <StarLine type="main" />
+                    <StarLine main />
                     <Grid container justify="center" alignItems="center">
                         <Grid item>
                             <LunaCard
@@ -66,7 +66,7 @@ class Home extends Component {
 
                 <div className="section luna">
                     <h1>Luna</h1>
-                    <StarLine type="main" />
+                    <StarLine main />
                     <div className="ongoing-tab">
                         <button
                             onClick={this.ongoingClick.bind(this, "ongoing")}
