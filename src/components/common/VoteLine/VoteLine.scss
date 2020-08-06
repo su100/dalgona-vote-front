@@ -1,0 +1,134 @@
+@import "styles/base.scss";
+
+.voteline {
+    .ongoing {
+        width: 987px;
+        font-size: 30px;
+        margin-bottom: 91px;
+        .count {
+            width: 150px;
+            display: inline-block;
+            font-weight: bold;
+            .star {
+                margin-right: 2.23px;
+                color: #fbf567;
+                text-shadow: 0px 0px 10px #fbf567;
+                transform: matrix(1, 0, -0.01, 1, 0, 0);
+            }
+            &.left {
+                text-align: left;
+            }
+            &.right {
+                text-align: right;
+            }
+        }
+        .name {
+            vertical-align: bottom;
+            margin: 0 4px;
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            display: inline-block;
+            font-weight: 900;
+        }
+        .vs {
+            font-weight: 900;
+            font-size: 40px;
+        }
+        .gauge {
+            margin-top: 30px;
+            width: inherit;
+            div {
+                height: 29px;
+                background: #fff;
+                display: inline-block;
+            }
+            .gauge-win {
+                background: linear-gradient(
+                    91.89deg,
+                    #fbf568 16.49%,
+                    #ffffff 33.37%,
+                    #fbf568 58.67%,
+                    #ffffff 75.62%,
+                    #fbf568 88.34%,
+                    #fbf568 88.34%
+                );
+            }
+        }
+    }
+    .complete {
+        margin-bottom: 25px;
+        width: 851px;
+        height: 101px;
+        padding: 11px 0;
+        border-bottom: 1px solid #fff;
+
+        .luna {
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+            .badge {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 79px;
+                height: 79px;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.1);
+                border: 2px solid #ffffff;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                border-radius: 25px;
+                img {
+                    width: 42px;
+                    height: 42px;
+                }
+                span {
+                    margin-top: -3px;
+                    display: block;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .name {
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                .count {
+                    font-weight: 300;
+                    font-size: 15px;
+                    .star {
+                        color: #fbf567;
+                        text-shadow: 0px 0px 10px #ffffff;
+                    }
+                }
+            }
+        }
+        .left {
+            justify-content: flex-start;
+            text-align: left;
+            .badge {
+                margin-right: 16px;
+            }
+        }
+        .right {
+            justify-content: flex-end;
+            text-align: right;
+            .badge {
+                margin-left: 16px;
+            }
+        }
+        .vs {
+            font-weight: 500;
+            font-size: 40px;
+        }
+    }
+}
