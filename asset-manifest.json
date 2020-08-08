@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dalgona-vote-front/static/css/main.f4e7d2b9.chunk.css",
+    "main.css": "/dalgona-vote-front/static/css/main.6c3b3480.chunk.css",
     "main.js": "/dalgona-vote-front/static/js/main.5d8ca74c.chunk.js",
     "main.js.map": "/dalgona-vote-front/static/js/main.5d8ca74c.chunk.js.map",
     "runtime-main.js": "/dalgona-vote-front/static/js/runtime-main.ae256033.js",
@@ -8,9 +8,9 @@
     "static/js/2.59fcd64f.chunk.js": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js",
     "static/js/2.59fcd64f.chunk.js.map": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js.map",
     "index.html": "/dalgona-vote-front/index.html",
-    "precache-manifest.af3b9073f00d9b38c9c5a4dae4828b4f.js": "/dalgona-vote-front/precache-manifest.af3b9073f00d9b38c9c5a4dae4828b4f.js",
+    "precache-manifest.f7b9f6555eb839d16b0fc16a89541303.js": "/dalgona-vote-front/precache-manifest.f7b9f6555eb839d16b0fc16a89541303.js",
     "service-worker.js": "/dalgona-vote-front/service-worker.js",
-    "static/css/main.f4e7d2b9.chunk.css.map": "/dalgona-vote-front/static/css/main.f4e7d2b9.chunk.css.map",
+    "static/css/main.6c3b3480.chunk.css.map": "/dalgona-vote-front/static/css/main.6c3b3480.chunk.css.map",
     "static/js/2.59fcd64f.chunk.js.LICENSE.txt": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js.LICENSE.txt",
     "static/media/blackpink.png": "/dalgona-vote-front/static/media/blackpink.2304f82a.png",
     "static/media/crown.png": "/dalgona-vote-front/static/media/crown.7588aad3.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.ae256033.js",
     "static/js/2.59fcd64f.chunk.js",
-    "static/css/main.f4e7d2b9.chunk.css",
+    "static/css/main.6c3b3480.chunk.css",
     "static/js/main.5d8ca74c.chunk.js"
   ]
 }

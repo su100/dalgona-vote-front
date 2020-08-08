@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dalgona-vote-front/precache-manifest.af3b9073f00d9b38c9c5a4dae4828b4f.js"
+  "/dalgona-vote-front/precache-manifest.f7b9f6555eb839d16b0fc16a89541303.js"
 );
 
 self.addEventListener('message', (event) => {
