@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c46d3f383a3477f4e6728c760da31939",
+    "revision": "815fbf2386b6216185568b6eddae6911",
     "url": "/dalgona-vote-front/index.html"
   },
   {
-    "revision": "539573b59f2b3103f714",
-    "url": "/dalgona-vote-front/static/css/main.44ab27bc.chunk.css"
+    "revision": "cc03905a149a0b260969",
+    "url": "/dalgona-vote-front/static/css/main.f4e7d2b9.chunk.css"
   },
   {
-    "revision": "dc7b407c448ceb6d9467",
-    "url": "/dalgona-vote-front/static/js/2.2541e0dd.chunk.js"
+    "revision": "aafd048588a42d1714c6",
+    "url": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/dalgona-vote-front/static/js/2.2541e0dd.chunk.js.LICENSE.txt"
+    "url": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "539573b59f2b3103f714",
-    "url": "/dalgona-vote-front/static/js/main.0282a767.chunk.js"
+    "revision": "cc03905a149a0b260969",
+    "url": "/dalgona-vote-front/static/js/main.5d8ca74c.chunk.js"
   },
   {
     "revision": "ea1d26b52e3519044523",
