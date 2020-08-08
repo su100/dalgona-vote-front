@@ -48,14 +48,31 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            img {
-                width: 82px;
-                height: 82px;
+            cursor: pointer;
+            .preview {
+                width: inherit;
+                height: inherit;
+                background-size: cover;
             }
+            .select-img {
+                width: inherit;
+                height: inherit;
+                color: #000;
+            }
+
             .pic-text {
                 font-weight: 500;
                 font-size: 17px;
                 color: #000;
+                text-align: center;
+                .add-pic {
+                    display: block;
+                    width: 82px;
+                    height: 82px;
+                }
+            }
+            input[type="file"] {
+                display: none;
             }
         }
     }
