@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dalgona-vote-front/static/css/main.6c3b3480.chunk.css",
-    "main.js": "/dalgona-vote-front/static/js/main.5f4c1362.chunk.js",
-    "main.js.map": "/dalgona-vote-front/static/js/main.5f4c1362.chunk.js.map",
+    "main.js": "/dalgona-vote-front/static/js/main.5d8ca74c.chunk.js",
+    "main.js.map": "/dalgona-vote-front/static/js/main.5d8ca74c.chunk.js.map",
     "runtime-main.js": "/dalgona-vote-front/static/js/runtime-main.ae256033.js",
     "runtime-main.js.map": "/dalgona-vote-front/static/js/runtime-main.ae256033.js.map",
     "static/js/2.59fcd64f.chunk.js": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js",
     "static/js/2.59fcd64f.chunk.js.map": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js.map",
     "index.html": "/dalgona-vote-front/index.html",
-    "precache-manifest.500a9abd3dbe79efd218c678e7b8993c.js": "/dalgona-vote-front/precache-manifest.500a9abd3dbe79efd218c678e7b8993c.js",
+    "precache-manifest.a1b50d2d6d1921092d18eb38c5300bb3.js": "/dalgona-vote-front/precache-manifest.a1b50d2d6d1921092d18eb38c5300bb3.js",
     "service-worker.js": "/dalgona-vote-front/service-worker.js",
     "static/css/main.6c3b3480.chunk.css.map": "/dalgona-vote-front/static/css/main.6c3b3480.chunk.css.map",
     "static/js/2.59fcd64f.chunk.js.LICENSE.txt": "/dalgona-vote-front/static/js/2.59fcd64f.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.ae256033.js",
     "static/js/2.59fcd64f.chunk.js",
     "static/css/main.6c3b3480.chunk.css",
-    "static/js/main.5f4c1362.chunk.js"
+    "static/js/main.5d8ca74c.chunk.js"
   ]
 }
