@@ -1,24 +1,20 @@
 import React from "react";
 import PageTemplate from "components/common/PageTemplate";
 import MyContainer from "containers/MyContainer";
-import Header from "components/common/Header";
+import HeaderContainer from "containers/HeaderContainer";
 
 const MyPage = (props) => {
-    return (
-        <div>
-            <PageTemplate
-                header={
-                    <Header
-                        location={props.location}
-                        history={props.history}
-                        match={props.match}
-                    />
-                }
-            >
-                <MyContainer />
-            </PageTemplate>
-        </div>
-    );
+  return (
+    <div>
+      <PageTemplate
+        header={
+          <HeaderContainer history={props.history} location={props.location} />
+        }
+      >
+        <MyContainer history={props.history} />
+      </PageTemplate>
+    </div>
+  );
 };
 
 export default MyPage;

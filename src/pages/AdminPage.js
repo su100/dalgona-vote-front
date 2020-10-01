@@ -1,24 +1,20 @@
 import React from "react";
 import PageTemplate from "components/common/PageTemplate";
 import AdminContainer from "containers/AdminContainer";
-import Header from "components/common/Header";
+import HeaderContainer from "containers/HeaderContainer";
 
 const AdminPage = (props) => {
-    return (
-        <div>
-            <PageTemplate
-                header={
-                    <Header
-                        location={props.location}
-                        history={props.history}
-                        match={props.match}
-                    />
-                }
-            >
-                <AdminContainer />
-            </PageTemplate>
-        </div>
-    );
+  return (
+    <div>
+      <PageTemplate
+        header={
+          <HeaderContainer history={props.history} location={props.location} />
+        }
+      >
+        <AdminContainer history={props.history} />
+      </PageTemplate>
+    </div>
+  );
 };
 
 export default AdminPage;
