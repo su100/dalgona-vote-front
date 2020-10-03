@@ -3,8 +3,7 @@
 .home {
     padding-bottom: 60px;
     .section {
-        margin: 0 auto;
-        margin-top: 78px;
+        margin-top: 78px; 
         h1 {
             margin: 0;
             margin-bottom: 15px;
@@ -28,31 +27,16 @@
                 display: inline-block;
                 font-weight: 900;
                 font-size: 40px;
-                &:last-child {
-                    margin-top: 71px;
-                    font-weight: normal;
-                    font-size: 18px;
-                }
+            }
+            .description-login {
+                margin-top: 71px;
+                font-weight: normal;
+                font-size: 18px;
             }
         }
-    }
-
-    .hot {
-        .vs {
-            display: inline-block;
-            margin: 0 59px;
-            font-weight: 900;
-            font-size: 45px;
-        }
-    }
+    } 
 
     .luna {
-        .vs {
-            display: inline-block;
-            margin: 0 12px;
-            font-weight: 900;
-            font-size: 30px;
-        }
         .ongoing-tab {
             text-align: right;
             margin-bottom: 60px;

@@ -1,0 +1,43 @@
+@import "styles/base.scss";
+
+
+.vote-card{  
+    .vote-card-title{  
+        background: rgba(0,0,0,0.1);
+        text-align: center; 
+        height: 45px;
+        line-height: 45px;
+        font-weight: 600;
+        font-size:22px; 
+        border-radius: 30px; 
+        border: 1px solid #fff;
+    }
+    .vote-card-contents{ 
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        .vs {
+            display: inline-block;
+            margin: 0 12px;
+            font-weight: 900;
+            font-size: 30px;
+        }
+    }
+    &.hot{   
+        .vote-card-title{  
+            margin:0 auto;
+            width:800px; 
+            height: 65px;
+            line-height: 65px;
+            font-size:30px; 
+            border-radius: 35px; 
+        }
+        .vote-card-contents{ 
+            .vs { 
+                margin: 0 59px; 
+                font-size: 45px;
+            }
+        }
+    }
+}

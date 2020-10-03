@@ -24,6 +24,9 @@
         width: 199px;
         height: 313px;
         border-radius: 50px;
+        &.empty{
+            background: rgba(70, 62, 75, 0.582);
+        }
         img {
             background: pink;
             border-radius: inherit;

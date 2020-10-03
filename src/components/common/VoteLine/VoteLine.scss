@@ -1,15 +1,14 @@
 @import "styles/base.scss";
 
-.voteline {
+.voteline { 
     .ongoing {
-        width: 987px;
-        font-size: 30px;
-        margin-bottom: 91px;
+        width: 680px;
+        font-size: 30px; 
         &:last-child {
             margin-bottom: 15;
         }
         .count {
-            width: 150px;
+            width: 100px;
             display: inline-block;
             font-weight: bold;
             .star {
@@ -28,7 +27,7 @@
         .name {
             vertical-align: bottom;
             margin: 0 4px;
-            width: 200px;
+            width: 150px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -61,8 +60,7 @@
             }
         }
     }
-    .complete {
-        margin-bottom: 25px;
+    .complete { 
         width: 851px;
         height: 101px;
         padding: 11px 0;
@@ -132,6 +130,12 @@
         .vs {
             font-weight: 500;
             font-size: 40px;
+        }
+    } 
+    
+    &.my{
+        .ongoing{
+            width:880px;
         }
     }
 }

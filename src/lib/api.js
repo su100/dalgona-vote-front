@@ -1,9 +1,14 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8000/rest-auth";
+const API_BASE_URL = "http://localhost:8000";
 
+/* Auth */
 const getToken = () => {
   return window.sessionStorage.getItem("__AUTH__");
+};
+
+const getAccesesToken = () => {
+  if (getToken()) return "jwt " + getToken();
 };
 
 export const isUserLoggedIn = () => {
@@ -16,7 +21,7 @@ export const isUserLoggedIn = () => {
 };
 
 export const signUp = (username, password1, password2, nickname) =>
-  axios.post(`${API_BASE_URL}/registration`, {
+  axios.post(`${API_BASE_URL}/rest-auth/registration`, {
     username,
     password1,
     password2,
@@ -24,7 +29,59 @@ export const signUp = (username, password1, password2, nickname) =>
   });
 
 export const signIn = (username, password) =>
-  axios.post(`${API_BASE_URL}/login`, {
+  axios.post(`${API_BASE_URL}/rest-auth/login`, {
     username,
     password,
   });
+
+/* Vote */
+export const getVoteList = (ended, voted) =>
+  axios.get(`${API_BASE_URL}/board`, {
+    params: { ended, voted },
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const getHotBoard = () =>
+  axios.get(`${API_BASE_URL}/hotboard`, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const postVoteBoard = (title, ended = false) =>
+  axios.post(
+    `${API_BASE_URL}/board`,
+    {
+      title,
+      ended,
+    },
+    {
+      headers: { Authorization: getAccesesToken() },
+    }
+  );
+
+export const deleteVoteBoard = (boardId) =>
+  axios.delete(`${API_BASE_URL}/board/${boardId}`, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const postVoteContents = (formdata) =>
+  axios.post(`${API_BASE_URL}/voteboard`, formdata, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const postVote = (contentsId) =>
+  axios.post(
+    `${API_BASE_URL}/voteboard/${contentsId}`,
+    {},
+    {
+      headers: { Authorization: getAccesesToken() },
+    }
+  );
+
+export const updateVoteBoard = (boardId, title, ended) =>
+  axios.put(
+    `${API_BASE_URL}/board/${boardId}`,
+    { title, ended },
+    {
+      headers: { Authorization: getAccesesToken() },
+    }
+  );
