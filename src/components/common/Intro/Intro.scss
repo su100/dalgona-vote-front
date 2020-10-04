@@ -14,3 +14,15 @@
         padding-right: 34px;
     }
 }
+
+@media screen and (max-width: $mobile-width){
+    .intro{
+        width:100vw;
+        .title{
+
+        }
+        .description{
+            
+        }
+    }
+}

@@ -29,9 +29,9 @@
         }
         img {
             background: pink;
-            border-radius: inherit;
-            width: 199px;
-            height: 313px;
+            border-radius: inherit; 
+            width: inherit;
+            height: inherit;
         }
         .card-background {
             position: absolute;
@@ -95,8 +95,60 @@
             margin-bottom: 13px;
             border-radius: 70px;
             img {
-                width: 270px;
-                height: 423px;
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:$mobile-width){
+    .luna-card{  
+        font-size: 15px; 
+        .crown {
+            height: 14px;
+            margin-left: -7px;
+            img {
+                filter: drop-shadow(0px 0px 10px #ffffff); 
+                width: 35px;
+                height:35px;
+            }
+        } 
+        .winner {
+            img {
+                box-shadow: 0px 0px 20px #fffba6;
+            }
+        }
+        .card { 
+            margin-bottom: 10px;
+            width: 150px;
+            height: 190px;
+            border-radius: 43px;  
+            .card-background {      
+                &:hover { 
+                    button {  
+                        font-size: 20px; 
+                    }
+                }
+            }
+        } 
+        
+        &.hot {
+            font-weight: 900;
+            font-size: 15px;
+            .crown {
+                height: 14px;
+                margin-left: -7px;
+                img {
+                    width: 35px;
+                    height:35px;
+                }
+            }
+            .card { 
+                width: 150px;
+                height: 190px; 
+                border-radius: 43px; 
             }
         }
     }

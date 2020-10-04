@@ -1,6 +1,10 @@
 @import "styles/base.scss";
 
 .page-template {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #ffffff;
     width: 100%;
     min-width: 1200px;
@@ -13,5 +17,18 @@
         justify-content: center;
         width: 1200px;
         min-height: 100vh;
+    }
+}
+
+
+@media screen and (max-width:$mobile-width){
+    .page-template{ 
+        min-width:100vw;
+        header{ 
+            width: 100vw;
+        }
+        main{
+            width: 100vw;
+        }
     }
 }

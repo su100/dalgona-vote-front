@@ -11,7 +11,7 @@ class Header extends Component {
     if (this.props.isAuthenticated) {
       //로그인된 경우
       return (
-        <Grid item xs={6} container justify="flex-end" className="menu">
+        <Grid container justify="flex-end" className="menu">
           <Grid item>
             {this.props.isAdmin ? (
               <Link className={path === "/admin" ? "active" : ""} to="/admin">
@@ -30,7 +30,7 @@ class Header extends Component {
       );
     } else {
       return (
-        <Grid item xs={6} container justify="flex-end" className="menu">
+        <Grid container justify="flex-end" className="menu">
           <Grid item>
             <Link className={path === "/login" ? "active" : ""} to="/login">
               로그인
@@ -56,17 +56,10 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Grid
-          container
-          direction="row"
-          justify="space-between"
-          alignItems="center"
-        >
-          <Grid item xs={6} className="brand-name">
-            <Link to="/">Dalgona</Link>
-          </Grid>
-          {this.menuRender()}
-        </Grid>
+        <div className="brand-name">
+          <Link to="/">Dalgona</Link>
+        </div>
+        {this.menuRender()}
       </div>
     );
   }

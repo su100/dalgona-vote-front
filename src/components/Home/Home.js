@@ -22,23 +22,21 @@ class Home extends Component {
     const { isAuthenticated, nowhot, votelist, postVote } = this.props;
     return (
       <div className="home">
-        <div className="section intro">
-          <Grid container direction="row" alignItems="center">
-            <Grid item>
-              <img src={moon} alt="moon" />
-            </Grid>
-            <Grid item className="description">
-              <span>당신의 루나를 응원해주세요!</span>
-              <span>Who’s your Luna?</span>
-              {!this.props.isAuthenticated && (
-                <span className="description-login">
-                  *로그인을 통해 투표에 참여해보세요
-                </span>
-              )}
-            </Grid>
-          </Grid>
+        <div className="section home-intro">
+          <div className="image-area">
+            <img src={moon} alt="moon" />
+          </div>
+          <div className="description">
+            <span>당신의 루나를 응원해주세요!</span>
+            <span>Who’s your Luna?</span>
+            {!this.props.isAuthenticated && (
+              <span className="description-login">
+                *로그인을 통해 투표에 참여해보세요
+              </span>
+            )}
+          </div>
         </div>
-        <div className="section  ">
+        <div className="section hot">
           <h1>NOW HOT</h1>
           <StarLine main />
           {Object.keys(nowhot).length > 0 && (
@@ -72,7 +70,7 @@ class Home extends Component {
               투표완료
             </button>
           </div>
-          <Grid container spacing={8} justify="center" alignItems="center">
+          <Grid container justify="center" alignItems="center">
             {votelist.size > 0 &&
               votelist.map((vote) => {
                 return (
@@ -80,7 +78,8 @@ class Home extends Component {
                     <Grid
                       key={vote.get("id")}
                       item
-                      xs={6}
+                      xs={12}
+                      md={6}
                       container
                       justify="center"
                       alignItems="center"
