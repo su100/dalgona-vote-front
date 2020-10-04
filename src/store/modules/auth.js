@@ -9,12 +9,14 @@ export const SIGN_UP = "auth/SIGN_UP"; //회원가입
 export const SIGN_IN = "auth/SIGN_IN"; //로그인
 export const SIGN_OUT = "auth/SIGN_OUT"; //로그아웃
 export const SET_AUTH = "auth/SET_AUTH"; //로그인여부
+export const DELETE_USER = "auth/DELETE_USER"; //로그인여부
 
 /* 액션 생성자 */
 export const signUp = createAction(SIGN_UP, api.signUp);
 export const signIn = createAction(SIGN_IN, api.signIn);
 export const signOut = createAction(SIGN_OUT);
 export const setAuth = createAction(SET_AUTH);
+export const deleteUser = createAction(DELETE_USER, api.deleteUser);
 
 /* 초기 상태 정의 */
 const initialState = Map({
@@ -71,6 +73,19 @@ export default handleActions(
       },
       onFailure: (state, action) => {
         console.log(action);
+        alert(action.payload.data);
+        return state;
+      },
+    }),
+    ...pender({
+      type: DELETE_USER,
+      onSuccess: (state, action) => {
+        //access token 저장
+        window.sessionStorage.removeItem("__AUTH__");
+        alert("회원 탈퇴 되었습니다");
+        return state.set("isAuthenticated", false);
+      },
+      onFailure: (state, action) => {
         alert(action.payload.data);
         return state;
       },

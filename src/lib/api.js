@@ -34,6 +34,11 @@ export const signIn = (username, password) =>
     password,
   });
 
+export const deleteUser = () =>
+  axios.delete(`${API_BASE_URL}/accounts/user`, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
 /* Vote */
 export const getVoteList = (ended, voted) =>
   axios.get(`${API_BASE_URL}/board`, {

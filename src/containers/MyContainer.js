@@ -16,6 +16,20 @@ class MyContainer extends Component {
     }
   };
 
+  deleteUser = async () => {
+    const { AuthActions } = this.props;
+    try {
+      await AuthActions.deleteUser();
+      //isEnded: 0:진행, 1:완료 / isVoted: 0:투표x 1:투표o
+    } catch (e) {
+      console.log("error log:" + e);
+    }
+    if (this.props.success) {
+      //회원탈퇴 성공시
+      this.props.history.push("/");
+    }
+  };
+
   componentDidMount() {
     if (!this.props.isAuthenticated) {
       //권한 없을 때 접근하면 로그인 페이지
@@ -34,6 +48,7 @@ class MyContainer extends Component {
           votelist={votelist}
           isAuthenticated={isAuthenticated}
           getVoteList={this.getVoteList}
+          deleteUser={this.deleteUser}
         />
       </Fragment>
     );
@@ -44,6 +59,7 @@ export default connect(
   (state) => ({
     isAuthenticated: state.auth.get("isAuthenticated"),
     votelist: state.vote.get("votelist"),
+    success: state.pender.success["auth/DELETE_USER"],
   }),
   (dispatch) => ({
     AuthActions: bindActionCreators(authActions, dispatch),

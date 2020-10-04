@@ -12,7 +12,19 @@ class SignupContainer extends Component {
     } catch (e) {
       console.log("error log:" + e);
     }
+    if (this.props.success) {
+      //가입 성공시 홈으로
+      this.props.history.push("/");
+    }
   };
+
+  componentDidMount() {
+    if (this.props.isAuthenticated) {
+      //권한 있을 때 접근하면 뒤로가기
+      alert("이미 로그인된 상태입니다.");
+      this.props.history.goBack();
+    }
+  }
 
   render() {
     return (
@@ -23,6 +35,12 @@ class SignupContainer extends Component {
   }
 }
 
-export default connect((dispatch) => ({
-  AuthActions: bindActionCreators(authActions, dispatch),
-}))(SignupContainer);
+export default connect(
+  (state) => ({
+    isAuthenticated: state.auth.get("isAuthenticated"),
+    success: state.pender.success["auth/SIGN_UP"],
+  }),
+  (dispatch) => ({
+    AuthActions: bindActionCreators(authActions, dispatch),
+  })
+)(SignupContainer);

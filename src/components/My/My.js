@@ -17,9 +17,12 @@ class My extends Component {
     this.props.getVoteList(type === "ongoing" ? 0 : 1);
   };
 
+  withdrawal = () => {
+    if (window.confirm("회원 탈퇴 하시겠습니까?")) this.props.deleteUser();
+  };
+
   render() {
     const { votelist } = this.props;
-    console.log(votelist);
     return (
       <div className="my">
         <Intro
@@ -67,7 +70,7 @@ class My extends Component {
         >
           <Grid item>회원을 탈퇴하시겠습니까?</Grid>
           <Grid item>
-            <button>회원탈퇴</button>
+            <button onClick={this.withdrawal}>회원탈퇴</button>
           </Grid>
         </Grid>
       </div>

@@ -11,7 +11,7 @@ const SignupPage = (props) => {
           <HeaderContainer history={props.history} location={props.location} />
         }
       >
-        <SignupContainer />
+        <SignupContainer history={props.history} />
       </PageTemplate>
     </div>
   );
