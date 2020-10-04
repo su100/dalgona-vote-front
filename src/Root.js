@@ -9,15 +9,15 @@ import { Route } from "react-router-dom";
 const store = configure();
 
 const Root = () => {
-    return (
-        <Provider store={store}>
-            <BrowserRouter basename="/dalgona-vote-front/">
-                <ScrollToTop>
-                    <Route path="/" component={App} />
-                </ScrollToTop>
-            </BrowserRouter>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <ScrollToTop>
+          <Route path="/" component={App} />
+        </ScrollToTop>
+      </BrowserRouter>
+    </Provider>
+  );
 };
 
 export default Root;
