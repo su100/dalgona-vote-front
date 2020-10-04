@@ -1,6 +1,7 @@
 @import "styles/base.scss";
 
 .admin {
+    margin-top: 31px;
     button{ 
         color: #fff;
         border: 2px solid #ffffff;
@@ -33,29 +34,20 @@
             );
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
-    }
-    .vote{ 
-        margin-bottom: 25px;
-        .button-area{
-            margin-left:20px;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            button{ 
-                width: 55px;
-                height: 41px; 
-                font-weight: bold;
-                font-size: 15px;
-                background: rgba(0, 0, 0, 0.1);  
-                border-radius: 15px; 
-                margin-bottom:3px;
-                &:last-child{margin:0;}
-            }   
-                
-        }
-    }
+    } 
     .edit-area{
+        margin-bottom:13px;
+        .vote-title{ 
+            padding: 0 24px;
+            height: 40px;
+            line-height: 40px;
+            background: rgba(0,0,0,0.1);
+            text-align: center; 
+            font-weight: 600;
+            font-size:17px; 
+            border-radius: 30px;  
+
+        }
         input{
             margin-right:20px;
             border:none;
@@ -73,6 +65,30 @@
             height:40px; 
             font-size:15px; 
             border-radius: 15px; 
+        }
+    }
+    .vote{ 
+        margin-bottom: 25px;
+        .vote-id{ 
+            margin-right: 10px;
+        }
+        .button-area{
+            margin-left:20px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button{ 
+                width: 55px;
+                height: 41px; 
+                font-weight: bold;
+                font-size: 15px;
+                background: rgba(0, 0, 0, 0.1);  
+                border-radius: 15px; 
+                margin-bottom:3px;
+                &:last-child{margin:0;}
+            }   
+                
         }
     }
     .add-vote{
@@ -93,6 +109,104 @@
                 height: 50px; 
                 font-size: 22px;     
                 border-radius: 60px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width){
+    .admin{ 
+        margin-top: 15vh; 
+        .ongoing-tab {
+            width: 80vw; 
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            button {
+                margin-left: 25px;   
+                padding: 9px 18px;
+                font-size: 17px;  
+                border-radius: 25px;
+                &:first-child {
+                    margin-left:0;
+                }
+            } 
+        }
+            
+        
+        .vote{ 
+            margin-bottom: 45px;  
+            .edit-area{
+                margin-bottom: 13px;
+                .vote-title{  
+                    padding: 0 24px;
+                    height: 40px;
+                    line-height: 40px;
+                    background: rgba(0,0,0,0.1);
+                    text-align: center; 
+                    font-weight: 600;
+                    font-size:17px; 
+                    border-radius: 30px;  
+    
+                }
+                input{
+                    margin-right:7px; 
+                    padding-left:5px;   
+                    width: 47vw;
+                    height:40px;
+                    font-size:14px;
+                }
+                span{
+                    font-size:12px;
+                }
+                button{
+                    margin-left:10px;
+                    width: 47px;
+                    height:40px; 
+                    font-size:15px; 
+                    border-radius: 15px; 
+                }
+            }
+            .vote-id{
+                margin-right: 0;
+                width:100vw;
+                text-align:center;
+            }
+            .button-area{
+                margin-left:0;    
+                flex-direction: row; 
+                button{  
+                    margin-bottom:0;
+                    margin-right:10px;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                }   
+            }
+        }
+        .add-vote{
+            margin-top:40px;
+            padding-bottom:10vh;
+            div{
+                margin-bottom:13px;
+            }
+            input{
+                margin-right:0;
+                width: 80vw;
+                height: 40px;
+                font-size:17px;
+                border-radius: 5px;
+                border:none; 
+                &::placeholder {
+                    padding-left: 15px;
+                }
+            }
+            .add-button {   
+                button {
+                    width: 200px;
+                    height: 50px; 
+                    font-size: 20px;      
+                }
             }
         }
     }

@@ -5,7 +5,7 @@
         width: 680px;
         font-size: 30px; 
         &:last-child {
-            margin-bottom: 15;
+            margin-bottom: 15px;
         }
         .count {
             width: 100px;
@@ -136,6 +136,95 @@
     &.my{
         .ongoing{
             width:880px;
+        }
+    }
+}
+
+
+@media screen and (max-width:$mobile-width){ 
+    .voteline { 
+        .ongoing {
+            width: 91vw;
+            max-width: 500px;
+            font-size: 18px; 
+            &:last-child {
+                margin-bottom: 10px;
+            }
+            .count {
+                height: 30px;
+                line-height: 30px;
+                width: 15vw;  
+                .star {
+                    margin-right: 3px;  
+                } 
+            }
+            .name {  
+                height: 30px;
+                line-height: 30px;
+                width: 20vw;   
+            }
+            .vs {  
+                height: 30px;
+                line-height: 30px;
+                font-size: 25px;
+            }
+            .gauge {
+                margin-top: 10px; 
+                div {
+                    height: 22px;  
+                }
+                
+            }
+        }
+            
+        .complete { 
+            width: 91vw;
+            max-width: 500px; 
+            height: 70px;   
+            margin-bottom:20px;
+            .luna {   
+                width: 36vw;
+                .badge {  
+                    width: 45px;
+                    height: 45px;     
+                    border-radius: 15px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    span {
+                        margin-top: -5px;  
+                        font-size: 14px;
+                    }
+                }
+
+                .info { 
+                    .name { 
+                        font-size: 16px;
+                    } 
+                }
+            }
+            .left { 
+                .badge {
+                    margin-right: 16px;
+                }
+            }
+            .right { 
+                .badge {
+                    margin-left: 16px;
+                }
+            }
+            .vs { 
+                font-weight: 500;
+                font-size: 24px;
+            }
+        } 
+        
+        &.my{
+            .ongoing{
+                width: 91vw;
+                max-width: 500px;
+            }
         }
     }
 }

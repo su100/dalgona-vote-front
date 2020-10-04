@@ -1,6 +1,7 @@
 @import "styles/base.scss";
 
 .my {
+    margin-top: 31px;
     .ongoing-tab {
         width: 987px;
         margin: 0 auto;
@@ -49,6 +50,39 @@
             text-decoration: underline;
             text-underline-position: under;
             text-decoration-color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width){
+    .my{
+        
+        margin-top: 15vh; 
+        .ongoing-tab {
+            width: 80vw; 
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            button {
+                margin-left: 25px;   
+                padding: 9px 18px;
+                font-size: 17px;  
+                border-radius: 25px;
+                &:first-child {
+                    margin-left:0;
+                }       
+            } 
+        }
+        .empty-vote{ 
+            margin: 5vh auto;   
+        }
+        .secession {
+            margin-top: 10vh;
+            padding-bottom: 0;
+            font-size: 15px;
+            button { 
+                margin-top: 10px; 
+            }
         }
     }
 }

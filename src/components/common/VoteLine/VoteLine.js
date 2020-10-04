@@ -11,7 +11,13 @@ function VoteLine({ isMy, contents, ongoing }) {
   const count2 = contents.length === 2 ? contents[1].voter_count : 0;
 
   function calculateRatio(type) {
-    const width = isMy ? 880 : 680;
+    const screenWidth = window.screen.width;
+    let width;
+    if (screenWidth > 767) {
+      width = isMy ? 880 : 680;
+    } else {
+      width = Math.ceil(screenWidth * 0.9);
+    }
     if (count1 === 0 && count2 === 0) {
       return width / 2;
     } else {

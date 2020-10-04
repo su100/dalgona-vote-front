@@ -1,16 +1,17 @@
 @import "styles/base.scss";
 
 .intro {
+    margin:0 auto;
     width: 800px;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     img{
-        width:387px;
+        width:258px;
     }
     .intro-description{ 
-        margin-left:-95px;
+        margin-left:-65px;
         .title {
             margin-bottom: 12px;
             font-weight: bold;

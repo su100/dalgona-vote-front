@@ -149,6 +149,29 @@ class Admin extends Component {
                 justify="center"
                 alignItems="center"
               >
+                <Grid item className="edit-area">
+                  {this.state.isEdit && this.state.editId === vote.get("id") ? (
+                    <>
+                      <input
+                        type="text"
+                        value={this.state.editName}
+                        onChange={this.handleVoteName("editName")}
+                      />
+                      <span>완료</span>
+                      <Switch
+                        value="editOngoing"
+                        checked={this.state.editOngoing}
+                        onChange={this.handleOngoing("editOngoing")}
+                      />
+                      <span>진행</span>
+                      <button onClick={this.updateVote} value={vote.get("id")}>
+                        확인
+                      </button>
+                    </>
+                  ) : (
+                    <div className="vote-title">{vote.get("title")}</div>
+                  )}
+                </Grid>
                 <Grid
                   item
                   container
@@ -156,7 +179,9 @@ class Admin extends Component {
                   justify="center"
                   alignItems="center"
                 >
-                  <Grid item>{vote.get("id")}</Grid>
+                  <Grid item className="vote-id">
+                    {vote.get("id")}
+                  </Grid>
                   <Grid item>
                     <VoteLine
                       contents={vote.get("contents")}
@@ -188,29 +213,6 @@ class Admin extends Component {
                     </button>
                   </Grid>
                 </Grid>
-                <Grid item className="edit-area">
-                  {this.state.isEdit && this.state.editId === vote.get("id") ? (
-                    <>
-                      <input
-                        type="text"
-                        value={this.state.editName}
-                        onChange={this.handleVoteName("editName")}
-                      />
-                      <span>완료</span>
-                      <Switch
-                        value="editOngoing"
-                        checked={this.state.editOngoing}
-                        onChange={this.handleOngoing("editOngoing")}
-                      />
-                      <span>진행</span>
-                      <button onClick={this.updateVote} value={vote.get("id")}>
-                        확인
-                      </button>
-                    </>
-                  ) : (
-                    vote.get("title")
-                  )}
-                </Grid>
               </Grid>
             );
           })}
@@ -230,7 +232,15 @@ class Admin extends Component {
                 onChange={this.handleVoteName("votename")}
               />
             </Grid>
-            <Grid item xs={2} container>
+            <Grid
+              item
+              xs={12}
+              sm={2}
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+            >
               <Grid item>완료</Grid>
               <Grid item>
                 <Switch
@@ -241,7 +251,7 @@ class Admin extends Component {
               </Grid>
               <Grid item>진행</Grid>
             </Grid>
-            <Grid item className="add-button">
+            <Grid item xs={12} sm={3} className="add-button">
               <button onClick={this.postVoteBoard}>+투표추가</button>
             </Grid>
           </Grid>
