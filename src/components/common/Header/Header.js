@@ -49,7 +49,7 @@ class Header extends Component {
   signOut = () => {
     if (window.confirm("로그아웃 하시겠습니까?")) {
       this.props.signOut();
-      this.props.history.push("/");
+      window.location.replace("/");
     }
   };
 
