@@ -54,7 +54,9 @@ export default handleActions(
         return state.set("isAuthenticated", true);
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        const data = action.payload.response.data;
+        if (data.username) alert(data.username);
+        if (data.nickname) alert(data.nickname);
         return state;
       },
     }),

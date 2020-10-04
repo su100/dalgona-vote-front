@@ -18,6 +18,8 @@ class Signup extends Component {
     //각 항목이 모두 비어있지 않을 때
     if (tmp.username !== "" && tmp.password !== "" && tmp.nickname !== "") {
       this.props.signUp(tmp.username, tmp.password, tmp.nickname);
+    } else {
+      alert("항목을 모두 입력해주세요");
     }
   };
 
