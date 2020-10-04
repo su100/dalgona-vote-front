@@ -1,28 +1,47 @@
 @import "styles/base.scss";
 
 .intro {
-    width: 860px;
-    .title {
-        margin-bottom: 12px;
-        font-weight: bold;
-        font-size: 45px;
+    width: 800px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    img{
+        width:387px;
     }
-    .description {
-        font-weight: normal;
-        font-size: 25px;
-        text-align: right;
-        padding-right: 34px;
+    .intro-description{ 
+        margin-left:-95px;
+        .title {
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 45px;
+        }
+        .description {
+            font-weight: normal;
+            font-size: 25px;
+            text-align: right;
+            padding-right: 34px;
+        }
     }
 }
 
 @media screen and (max-width: $mobile-width){
     .intro{
-        width:100vw;
-        .title{
-
+        width:90vw;
+        margin:0 auto;
+        img{
+            width:120px;
         }
-        .description{
-            
+        .intro-description{ 
+            margin-left:0;
+            .title {
+                margin-bottom: 0; 
+                font-size: 24px;
+            }
+            .description { 
+                font-size: 13px; 
+                padding-right: 24px;
+            }
         }
     }
 }

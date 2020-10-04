@@ -30,6 +30,7 @@
 @media screen and (max-width:$mobile-width){
     .starline{
         .line{
+            width: 60vw;
             margin-bottom: 10px; 
             &.main {
                 margin-bottom: 35px;

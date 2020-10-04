@@ -1,31 +1,33 @@
 @import "styles/base.scss";
 
 .signup {
-    margin-top: 31px;
-
+    margin-top: 31px; 
     .form {
         margin-bottom: 95px;
-        .label {
-            display: block;
-            font-weight: 600;
-            font-size: 30px;
-            padding-top: 47px;
-            text-align: left;
-        }
-        input {
-            color: #fff;
-            font-size: 20px;
-            width: 378px;
-            height: 55px;
-            background: none;
-            border: none;
-            border-bottom: 1px solid #fff;
-            &::placeholder {
-                color: #fff;
+        display:flex;
+        flex-direction: row;
+        .form-section{ 
+            height: 300px;
+            margin-right:60px;
+            .label {
+                display: block;
+                font-weight: 600;
+                font-size: 30px;
+                padding-top: 47px;
+                text-align: left;
             }
-        }
-        .signup-name{
-            margin-right:25px;
+            input {
+                color: #fff;
+                font-size: 20px;
+                width: 378px;
+                height: 55px;
+                background: none;
+                border: none;
+                border-bottom: 1px solid #fff;
+                &::placeholder {
+                    color: #fff;
+                }
+            } 
         }
     }
     .submit {
@@ -45,6 +47,42 @@
             );
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width){
+    .signup{
+        margin-top: 15vh; 
+        .form {
+            margin-bottom: 60px;  
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            width:100vw;
+            .form-section{    
+                height: auto;
+                margin-right:0;
+                .label {  
+                    font-size: 16px;  
+                    padding-top: 30px;  
+                }
+                input {  
+                    font-size: 23px;
+                    width: 65vw;
+                    height: 40px;       
+                    &::placeholder { 
+                        font-size: 15px;
+                    }
+                } 
+            }
+        }
+        .submit {  
+            button { 
+                font-size: 22px;
+                width: 55vw;
+                height: 55px;      
+            }
         }
     }
 }

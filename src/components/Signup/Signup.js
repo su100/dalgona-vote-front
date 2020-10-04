@@ -34,40 +34,34 @@ class Signup extends Component {
           title="회원가입"
           description="달고나의 회원이 되어 루나를 응원해주세요!"
         />
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="flex-start"
-          className="form"
-        >
-          <Grid item xs={4} className="signup-name">
+        <div className="form">
+          <div className="form-section">
             <span className="label">이름</span>
             <input
               type="text"
               onChange={this.inputInfo("nickname")}
               placeholder="이름을 입력해주세요"
             />
-          </Grid>
-          <Grid item xs={4} container direction="column">
-            <Grid item>
+          </div>
+          <div className="form-section">
+            <div>
               <span className="label">아이디</span>
               <input
                 type="text"
                 placeholder="아이디를 입력해주세요"
                 onChange={this.inputInfo("username")}
               />
-            </Grid>
-            <Grid item>
+            </div>
+            <div>
               <span className="label">패스워드</span>
               <input
                 type="password"
                 placeholder="패스워드를 입력해주세요"
                 onChange={this.inputInfo("password")}
               />
-            </Grid>
-          </Grid>
-        </Grid>
+            </div>
+          </div>
+        </div>
         <div className="submit">
           <button onClick={this.signUp}>회원가입</button>
         </div>
