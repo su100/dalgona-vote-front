@@ -4,6 +4,7 @@
 .vote-card{  
     margin-bottom:80px;
     .vote-card-title{  
+        margin-bottom: 20px;
         background: rgba(0,0,0,0.1);
         text-align: center; 
         height: 45px;
@@ -28,6 +29,7 @@
     &.hot{   
         .vote-card-title{  
             margin:0 auto;
+            margin-bottom:20px;
             width:800px; 
             height: 65px;
             line-height: 65px;
