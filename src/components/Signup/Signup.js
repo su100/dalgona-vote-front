@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Intro from "components/common/Intro";
-import { Grid } from "@material-ui/core";
 import "./Signup.scss";
 
 class Signup extends Component {
@@ -16,10 +15,14 @@ class Signup extends Component {
   signUp = () => {
     const tmp = this.state;
     //각 항목이 모두 비어있지 않을 때
-    if (tmp.username !== "" && tmp.password !== "" && tmp.nickname !== "") {
-      this.props.signUp(tmp.username, tmp.password, tmp.nickname);
-    } else {
+    if (tmp.username === "" || tmp.password === "" || tmp.nickname === "") {
       alert("항목을 모두 입력해주세요");
+    } else if (tmp.nickname.length < 3) {
+      alert("이름을 3글자 이상 입력해주세요");
+    } else if (!isNaN(tmp.password) || tmp.password.length < 8) {
+      alert("비밀번호는 영문, 영문+숫자 8자리 이상입니다.");
+    } else {
+      this.props.signUp(tmp.username, tmp.password, tmp.nickname);
     }
   };
 
@@ -40,7 +43,7 @@ class Signup extends Component {
             <input
               type="text"
               onChange={this.inputInfo("nickname")}
-              placeholder="이름을 입력해주세요"
+              placeholder="이름을 입력해주세요: 3글자 이상"
             />
           </div>
           <div className="form-section">
@@ -56,7 +59,7 @@ class Signup extends Component {
               <span className="label">패스워드</span>
               <input
                 type="password"
-                placeholder="패스워드를 입력해주세요"
+                placeholder="패스워드를 입력해주세요: 영문,영문+숫자 8자리 이상"
                 onChange={this.inputInfo("password")}
               />
             </div>

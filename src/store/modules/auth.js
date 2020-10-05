@@ -55,8 +55,23 @@ export default handleActions(
       },
       onFailure: (state, action) => {
         const data = action.payload.response.data;
-        if (data.username) alert(data.username);
-        if (data.nickname) alert(data.nickname);
+        if (data.username) {
+          if (
+            data.username.includes("A user with that username already exists.")
+          )
+            alert("이미 존재하는 아이디입니다.");
+          else alert(data.username);
+        }
+        if (data.nickname) {
+          if (data.nickname.includes("This field must be unique."))
+            alert("이미 존재하는 이름입니다.");
+          else alert(data.username);
+        }
+        if (data.password1) {
+          if (data.password1.includes("This password is too common."))
+            alert("보안에 취약한 비밀번호입니다.");
+          else alert(data.password1);
+        }
         return state;
       },
     }),
