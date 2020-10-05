@@ -145,7 +145,6 @@
     .voteline { 
         .ongoing {
             width: 91vw;
-            max-width: 500px;
             font-size: 18px; 
             &:last-child {
                 margin-bottom: 10px;
@@ -154,6 +153,7 @@
                 height: 30px;
                 line-height: 30px;
                 width: 15vw;  
+                max-width:70px;
                 .star {
                     margin-right: 3px;  
                 } 
@@ -178,8 +178,7 @@
         }
             
         .complete { 
-            width: 91vw;
-            max-width: 500px; 
+            width: 91vw; 
             height: 70px;   
             margin-bottom:20px;
             .luna {   
