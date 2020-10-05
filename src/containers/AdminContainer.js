@@ -69,9 +69,10 @@ class AdminContainer extends Component {
   }
 
   render() {
-    const { votelist } = this.props;
+    const { loading, votelist } = this.props;
     return (
       <Admin
+        loading={loading}
         votelist={votelist}
         postVoteBoard={this.postVoteBoard}
         getVoteList={this.getVoteList}
@@ -85,6 +86,7 @@ class AdminContainer extends Component {
 
 export default connect(
   (state) => ({
+    loading: state.pender.pending["vote/LIST_VOTE_BOARD"],
     isAuthenticated: state.auth.get("isAuthenticated"),
     isAdmin: state.auth.get("isAdmin"),
     votelist: state.vote.get("votelist"),

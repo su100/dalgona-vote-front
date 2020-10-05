@@ -95,17 +95,16 @@
         margin-top:50px;
         padding-bottom:170px;
         input{
-            width: 200px;
+            width: 270px;
             height: 40px;
             font-size:22px;
             border-radius: 5px;
-            border:none;
-            margin-right:30px;
+            border:none; 
         }
         .add-button { 
             text-align: center;
             button {
-                width: 250px;
+                width: 200px;
                 height: 50px; 
                 font-size: 22px;     
                 border-radius: 60px;
@@ -193,6 +192,7 @@
             input{
                 margin-right:0;
                 width: 80vw;
+                max-width: 400px;
                 height: 40px;
                 font-size:17px;
                 border-radius: 5px;

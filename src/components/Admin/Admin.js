@@ -4,6 +4,7 @@ import { Grid, Switch } from "@material-ui/core";
 import AddModal from "components/common/AddModal";
 import Intro from "components/common/Intro";
 import VoteLine from "components/common/VoteLine";
+import Progress from "components/common/Progress";
 import "./Admin.scss";
 
 class Admin extends Component {
@@ -137,85 +138,94 @@ class Admin extends Component {
           </button>
         </div>
         <Grid container direction="column" justify="center" alignItems="center">
-          {this.props.votelist.map((vote) => {
-            const contents = vote.get("contents");
-            return (
-              <Grid
-                key={vote.get("id")}
-                className="vote"
-                item
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-              >
-                <Grid item className="edit-area">
-                  {this.state.isEdit && this.state.editId === vote.get("id") ? (
-                    <>
-                      <input
-                        type="text"
-                        value={this.state.editName}
-                        onChange={this.handleVoteName("editName")}
-                      />
-                      <span>완료</span>
-                      <Switch
-                        value="editOngoing"
-                        checked={this.state.editOngoing}
-                        onChange={this.handleOngoing("editOngoing")}
-                      />
-                      <span>진행</span>
-                      <button onClick={this.updateVote} value={vote.get("id")}>
-                        확인
-                      </button>
-                    </>
-                  ) : (
-                    <div className="vote-title">{vote.get("title")}</div>
-                  )}
-                </Grid>
+          {this.props.loading ? (
+            <Progress />
+          ) : (
+            this.props.votelist.map((vote) => {
+              const contents = vote.get("contents");
+              return (
                 <Grid
+                  key={vote.get("id")}
+                  className="vote"
                   item
                   container
-                  direction="row"
+                  direction="column"
                   justify="center"
                   alignItems="center"
                 >
-                  <Grid item className="vote-id">
-                    {vote.get("id")}
-                  </Grid>
-                  <Grid item>
-                    <VoteLine
-                      contents={vote.get("contents")}
-                      ongoing={this.state.ongoing}
-                    />
-                  </Grid>
-                  <Grid item className="button-area">
-                    {contents.length < 2 && (
-                      <button
-                        className="add-contents-button"
-                        onClick={this.openAddModal}
-                        value={vote.get("id")}
-                      >
-                        추가
-                      </button>
+                  <Grid item className="edit-area">
+                    {this.state.isEdit &&
+                    this.state.editId === vote.get("id") ? (
+                      <>
+                        <input
+                          type="text"
+                          value={this.state.editName}
+                          onChange={this.handleVoteName("editName")}
+                        />
+                        <span>완료</span>
+                        <Switch
+                          value="editOngoing"
+                          checked={this.state.editOngoing}
+                          onChange={this.handleOngoing("editOngoing")}
+                        />
+                        <span>진행</span>
+                        <button
+                          onClick={this.updateVote}
+                          value={vote.get("id")}
+                        >
+                          확인
+                        </button>
+                      </>
+                    ) : (
+                      <div className="vote-title">{vote.get("title")}</div>
                     )}
-                    <button
-                      onClick={this.editVote.bind(this, {
-                        id: vote.get("id"),
-                        title: vote.get("title"),
-                      })}
-                    >
-                      {this.state.isEdit && this.state.editId === vote.get("id")
-                        ? "취소"
-                        : "수정"}
-                    </button>
-                    <button onClick={this.deleteVote} value={vote.get("id")}>
-                      삭제
-                    </button>
+                  </Grid>
+                  <Grid
+                    item
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <Grid item className="vote-id">
+                      {vote.get("id")}
+                    </Grid>
+                    <Grid item>
+                      <VoteLine
+                        contents={vote.get("contents")}
+                        ongoing={this.state.ongoing}
+                      />
+                    </Grid>
+                    <Grid item className="button-area">
+                      {contents.length < 2 && (
+                        <button
+                          className="add-contents-button"
+                          onClick={this.openAddModal}
+                          value={vote.get("id")}
+                        >
+                          추가
+                        </button>
+                      )}
+                      <button
+                        onClick={this.editVote.bind(this, {
+                          id: vote.get("id"),
+                          title: vote.get("title"),
+                        })}
+                      >
+                        {this.state.isEdit &&
+                        this.state.editId === vote.get("id")
+                          ? "취소"
+                          : "수정"}
+                      </button>
+                      <button onClick={this.deleteVote} value={vote.get("id")}>
+                        삭제
+                      </button>
+                    </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
-            );
-          })}
+              );
+            })
+          )}
 
           <Grid
             className="add-vote"
@@ -235,7 +245,7 @@ class Admin extends Component {
             <Grid
               item
               xs={12}
-              sm={2}
+              sm={3}
               container
               direction="row"
               justify="center"
