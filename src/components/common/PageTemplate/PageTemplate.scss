@@ -9,6 +9,7 @@
     width: 100%;
     min-width: 1200px;
     background: linear-gradient(180deg, #5600c4 0%, #c000c4 100%);
+    min-height: 100vh;
     header {
         width: 1200px;
     }
@@ -16,7 +17,6 @@
         display: flex;
         justify-content: center;
         width: 1200px;
-        min-height: 100vh;
     }
 }
 
