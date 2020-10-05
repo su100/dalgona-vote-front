@@ -41,10 +41,11 @@ class MyContainer extends Component {
   }
 
   render() {
-    const { votelist, isAuthenticated } = this.props;
+    const { loading, votelist, isAuthenticated } = this.props;
     return (
       <Fragment>
         <My
+          loading={loading}
           votelist={votelist}
           isAuthenticated={isAuthenticated}
           getVoteList={this.getVoteList}
@@ -57,6 +58,7 @@ class MyContainer extends Component {
 
 export default connect(
   (state) => ({
+    loading: state.pender.pending["vote/LIST_VOTE_BOARD"],
     isAuthenticated: state.auth.get("isAuthenticated"),
     votelist: state.vote.get("votelist"),
     success: state.pender.success["auth/DELETE_USER"],

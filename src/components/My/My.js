@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Intro from "components/common/Intro";
 import VoteLine from "components/common/VoteLine";
+import Progress from "components/common/Progress";
 import { Grid } from "@material-ui/core";
 import "./My.scss";
 
@@ -45,7 +46,9 @@ class My extends Component {
         </div>
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item>
-            {votelist.size > 0 ? (
+            {this.props.loading ? (
+              <Progress />
+            ) : votelist.size > 0 ? (
               votelist.map((vote) => {
                 return (
                   <VoteLine
