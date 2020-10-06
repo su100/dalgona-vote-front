@@ -133,7 +133,7 @@
         }
     } 
     
-    &.my{
+    &.my-voteline{
         .ongoing{
             width:880px;
         }
@@ -205,12 +205,12 @@
             }
             .left { 
                 .badge {
-                    margin-right: 16px;
+                    margin-right: 14px;
                 }
             }
             .right { 
                 .badge {
-                    margin-left: 16px;
+                    margin-left: 14px;
                 }
             }
             .vs { 
@@ -219,7 +219,7 @@
             }
         } 
         
-        &.my{
+        &.my-voteline{
             .ongoing{
                 width: 91vw;
                 max-width: 500px;

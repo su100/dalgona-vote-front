@@ -30,7 +30,7 @@ function VoteLine({ isMy, contents, ongoing }) {
   }
 
   return (
-    <div className={isMy ? "my voteline" : "voteline"}>
+    <div className={isMy ? "my-voteline voteline" : "voteline"}>
       {ongoing ? (
         <div className="ongoing">
           <Grid
