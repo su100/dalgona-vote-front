@@ -89,8 +89,26 @@ export default handleActions(
         }
       },
       onFailure: (state, action) => {
-        console.log(action);
-        alert(action.payload.data);
+        const data = action.payload.response.data;
+        if (data.non_field_errors) {
+          if (
+            data.non_field_errors.includes(
+              "Unable to log in with provided credentials."
+            )
+          )
+            alert("가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.");
+          if (
+            data.non_field_errors.includes(
+              'Must include "username" and "password".'
+            )
+          )
+            alert("항목을 모두 입력해주세요");
+          if (data.non_field_errors.includes("User account is disabled."))
+            alert("비활성화된 계정입니다.");
+        }
+        if (data.password)
+          if (data.password.includes("This field is required."))
+            alert("비밀번호를 입력해주세요");
         return state;
       },
     }),
