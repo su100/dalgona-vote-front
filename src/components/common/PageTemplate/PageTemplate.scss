@@ -13,7 +13,7 @@
     header {
         width: 1200px;
     }
-    main {
+    main {min-height: 100vh;
         display: flex;
         justify-content: center;
         width: 1200px;
