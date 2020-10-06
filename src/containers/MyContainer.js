@@ -20,7 +20,6 @@ class MyContainer extends Component {
     const { AuthActions } = this.props;
     try {
       await AuthActions.deleteUser();
-      //isEnded: 0:진행, 1:완료 / isVoted: 0:투표x 1:투표o
     } catch (e) {
       console.log("error log:" + e);
     }
@@ -30,6 +29,23 @@ class MyContainer extends Component {
     }
   };
 
+  updateUser = async (nickname) => {
+    const { AuthActions } = this.props;
+    try {
+      await AuthActions.updateUser(nickname);
+    } catch (e) {
+      console.log("error log:" + e);
+    }
+  };
+
+  updatePassword = async (new_password1, new_password2) => {
+    const { AuthActions } = this.props;
+    try {
+      await AuthActions.updatePassword(new_password1, new_password2);
+    } catch (e) {
+      console.log("error log:" + e);
+    }
+  };
   componentDidMount() {
     if (!this.props.isAuthenticated) {
       //권한 없을 때 접근하면 로그인 페이지
@@ -49,6 +65,8 @@ class MyContainer extends Component {
           votelist={votelist}
           isAuthenticated={isAuthenticated}
           getVoteList={this.getVoteList}
+          updateUser={this.updateUser}
+          updatePassword={this.updatePassword}
           deleteUser={this.deleteUser}
         />
       </Fragment>

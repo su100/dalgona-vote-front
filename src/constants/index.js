@@ -4,7 +4,8 @@ let url;
 if (process.env.NODE_ENV === "production") {
   url = "http://dalgona.shop";
 } else {
-  url = "http://localhost:8000";
+  url = "http://dalgona.shop";
+  // url = "http://localhost:8000";
 }
 
 export const API_BASE_URL = url;
