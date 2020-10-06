@@ -29,6 +29,12 @@ class Login extends Component {
     this.setState({ [name]: e.target.value });
   };
 
+  handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      this.signIn();
+    }
+  };
+
   render() {
     return (
       <div className="login">
@@ -45,6 +51,7 @@ class Login extends Component {
               type="text"
               placeholder="아이디를 입력해주세요"
               onChange={this.inputInfo("username")}
+              onKeyPress={this.handleKeyPress}
             />
           </Grid>
           <Grid item>
@@ -52,6 +59,7 @@ class Login extends Component {
               type="password"
               placeholder="패스워드를 입력해주세요"
               onChange={this.inputInfo("password")}
+              onKeyPress={this.handleKeyPress}
             />
           </Grid>
         </Grid>
