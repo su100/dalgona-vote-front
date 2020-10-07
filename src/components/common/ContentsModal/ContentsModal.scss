@@ -1,6 +1,6 @@
 @import "styles/base.scss";
 
-.add-modal {
+.contents-modal {
     z-index: 100;
     position: fixed;
     left: 50%;
@@ -104,7 +104,7 @@
             font-size: 22px; 
         box-shadow:none;
         }
-        .cancel-button {
+        .delete-button {
             font-weight: normal;
             color: #000;
             background: #f7f7f7;
@@ -129,7 +129,7 @@
 
 @media screen and (max-width: $mobile-width){
         
-    .add-modal {  
+    .contents-modal {  
         width: 90vw;
         max-width: 450px;
         height: 70vh; 

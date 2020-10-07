@@ -9,7 +9,9 @@ export const SIGN_UP = "auth/SIGN_UP"; //회원가입
 export const SIGN_IN = "auth/SIGN_IN"; //로그인
 export const SIGN_OUT = "auth/SIGN_OUT"; //로그아웃
 export const SET_AUTH = "auth/SET_AUTH"; //로그인여부
-export const DELETE_USER = "auth/DELETE_USER"; //로그인여부
+export const DELETE_USER = "auth/DELETE_USER"; //회원탈퇴
+export const UPDATE_USER = "auth/UPDATE_USER"; //회원정보 수정
+export const UPDATE_PASSWORD = "auth/UPDATE_PASSWORD"; //비밀번호 수정
 
 /* 액션 생성자 */
 export const signUp = createAction(SIGN_UP, api.signUp);
@@ -17,6 +19,8 @@ export const signIn = createAction(SIGN_IN, api.signIn);
 export const signOut = createAction(SIGN_OUT);
 export const setAuth = createAction(SET_AUTH);
 export const deleteUser = createAction(DELETE_USER, api.deleteUser);
+export const updateUser = createAction(UPDATE_USER, api.updateUser);
+export const updatePassword = createAction(UPDATE_PASSWORD, api.updatePassword);
 
 /* 초기 상태 정의 */
 const initialState = Map({
@@ -121,7 +125,48 @@ export default handleActions(
         return state.set("isAuthenticated", false);
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
+        return state;
+      },
+    }),
+    ...pender({
+      type: UPDATE_USER,
+      onSuccess: (state, action) => {
+        console.log(action.payload.data);
+        alert(`${action.payload.data.nickname}님 이름이 변경되었습니다.`);
+        return state;
+      },
+      onFailure: (state, action) => {
+        const data = action.payload.response.data;
+        if (data.nickname) {
+          if (data.nickname.includes("This field must be unique."))
+            alert("이미 존재하는 이름입니다");
+        } else {
+          alert("문제가 발생했습니다");
+          console.log(data);
+        }
+
+        return state;
+      },
+    }),
+    ...pender({
+      type: UPDATE_PASSWORD,
+      onSuccess: (state, action) => {
+        alert("비밀번호가 변경되었습니다.");
+        return state;
+      },
+      onFailure: (state, action) => {
+        const data = action.payload.response.data;
+        if (data.new_password2) {
+          if (
+            data.new_password2.includes("The two password fields didn’t match.")
+          )
+            alert("비밀번호 확인이 일치하지 않습니다.");
+        } else {
+          alert(data);
+          console.log(data);
+        }
         return state;
       },
     }),

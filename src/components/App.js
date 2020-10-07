@@ -14,8 +14,9 @@ import {
 } from "pages";
 
 class App extends Component {
-  componentDidMount() {
-    const { AuthActions } = this.props;
+  constructor(props) {
+    super(props);
+    const { AuthActions } = props;
     AuthActions.setAuth();
   }
 

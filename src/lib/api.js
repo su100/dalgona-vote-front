@@ -39,6 +39,24 @@ export const deleteUser = () =>
     headers: { Authorization: getAccesesToken() },
   });
 
+export const updateUser = (nickname) =>
+  axios.put(
+    `${API_BASE_URL}/accounts/user`,
+    { nickname },
+    {
+      headers: { Authorization: getAccesesToken() },
+    }
+  );
+
+export const updatePassword = (new_password1, new_password2) =>
+  axios.post(
+    `${API_BASE_URL}/rest-auth/password/change`,
+    { new_password1, new_password2 },
+    {
+      headers: { Authorization: getAccesesToken() },
+    }
+  );
+
 /* Vote */
 export const getVoteList = (ended, voted) =>
   axios.get(`${API_BASE_URL}/board`, {
@@ -70,6 +88,16 @@ export const deleteVoteBoard = (boardId) =>
 
 export const postVoteContents = (formdata) =>
   axios.post(`${API_BASE_URL}/voteboard`, formdata, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const updateVoteContents = (contentsId, formdata) =>
+  axios.put(`${API_BASE_URL}/voteboard/${contentsId}`, formdata, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const deleteVoteContents = (contentsId) =>
+  axios.delete(`${API_BASE_URL}/voteboard/${contentsId}`, {
     headers: { Authorization: getAccesesToken() },
   });
 

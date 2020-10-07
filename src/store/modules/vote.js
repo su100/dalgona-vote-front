@@ -11,6 +11,8 @@ export const POST_VOTE_BOARD = "vote/POST_VOTE_BOARD"; //투표 등록하기
 export const UPDATE_VOTE_BOARD = "vote/UPDATE_VOTE_BOARD"; //투표 정보 수정하기
 export const DELETE_VOTE_BOARD = "vote/DELETE_VOTE_BOARD"; //투표 삭제하기
 export const POST_VOTE_CONTENTS = "vote/POST_VOTE_CONTENTS"; //투표 내용 등록하기
+export const UPDATE_VOTE_CONTENTS = "vote/UPDATE_VOTE_CONTENTS"; //투표 항목 수정하기
+export const DELETE_VOTE_CONTENTS = "vote/DELETE_VOTE_CONTENTS"; //투표 항목 삭제하기
 export const POST_VOTE = "vote/POST_VOTE"; //투표하기
 export const CANCEL_VOTE = "vote/CANCEL_VOTE"; //투표하기
 
@@ -25,6 +27,14 @@ export const deleteVoteBoard = createAction(
 export const postVoteContents = createAction(
   POST_VOTE_CONTENTS,
   api.postVoteContents
+);
+export const updateVoteContents = createAction(
+  UPDATE_VOTE_CONTENTS,
+  api.updateVoteContents
+);
+export const deleteVoteContents = createAction(
+  DELETE_VOTE_CONTENTS,
+  api.deleteVoteContents
 );
 export const postVote = createAction(POST_VOTE, api.postVote);
 export const cancelVote = createAction(CANCEL_VOTE, api.postVote);
@@ -53,7 +63,8 @@ export default handleActions(
         return state.set("votelist", list);
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -63,7 +74,8 @@ export default handleActions(
         return state.set("nowhot", action.payload.data);
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -75,7 +87,8 @@ export default handleActions(
         return state;
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -86,7 +99,8 @@ export default handleActions(
         return state;
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -97,7 +111,8 @@ export default handleActions(
         return state;
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -109,7 +124,32 @@ export default handleActions(
         return state;
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
+        return state;
+      },
+    }),
+    ...pender({
+      type: UPDATE_VOTE_CONTENTS,
+      onSuccess: (state, action) => {
+        alert("투표 항목이 수정되었습니다");
+        return state;
+      },
+      onFailure: (state, action) => {
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
+        return state;
+      },
+    }),
+    ...pender({
+      type: DELETE_VOTE_CONTENTS,
+      onSuccess: (state, action) => {
+        alert("투표 항목이 삭제되었습니다");
+        return state;
+      },
+      onFailure: (state, action) => {
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -121,7 +161,8 @@ export default handleActions(
         return state;
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),
@@ -133,7 +174,8 @@ export default handleActions(
         return state;
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),

@@ -1,6 +1,16 @@
 @import "styles/base.scss";
 
 .voteline { 
+    .edit-name{ 
+        font-size: 30px;  
+        border:none;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover{
+            background: rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+    }
     .ongoing {
         width: 680px;
         font-size: 30px; 
@@ -27,7 +37,7 @@
         .name {
             vertical-align: bottom;
             margin: 0 4px;
-            width: 150px;
+            width: 180px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -133,7 +143,7 @@
         }
     } 
     
-    &.my{
+    &.my-voteline{
         .ongoing{
             width:880px;
         }
@@ -142,7 +152,10 @@
 
 
 @media screen and (max-width:$mobile-width){ 
-    .voteline { 
+    .voteline {    
+        .name{ 
+            font-size: 18px; 
+        }
         .ongoing {
             width: 91vw;
             font-size: 18px; 
@@ -205,12 +218,12 @@
             }
             .left { 
                 .badge {
-                    margin-right: 16px;
+                    margin-right: 14px;
                 }
             }
             .right { 
                 .badge {
-                    margin-left: 16px;
+                    margin-left: 14px;
                 }
             }
             .vs { 
@@ -219,7 +232,7 @@
             }
         } 
         
-        &.my{
+        &.my-voteline{
             .ongoing{
                 width: 91vw;
                 max-width: 500px;
