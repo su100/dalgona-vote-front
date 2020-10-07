@@ -36,7 +36,7 @@ class My extends Component {
 
   updateUser = () => {
     const { nickname } = this.state;
-    if (nickname === "") alert("이름을 입력해주세요");
+    if (nickname === "") alert("닉네임을 입력해주세요");
     else {
       this.props.updateUser(nickname);
       this.setState({ nickname: "" });
@@ -128,7 +128,7 @@ class My extends Component {
         )}
         {tab === 1 && (
           <div className="member-info">
-            <span>이름</span>
+            <span>닉네임</span>
             <input onChange={this.handleChange("nickname")} type="text" />{" "}
             <button onClick={this.updateUser}>변경</button>
           </div>

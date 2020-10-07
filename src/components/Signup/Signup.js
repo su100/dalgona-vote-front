@@ -18,7 +18,7 @@ class Signup extends Component {
     if (tmp.username === "" || tmp.password === "" || tmp.nickname === "") {
       alert("항목을 모두 입력해주세요");
     } else if (tmp.nickname.length < 3) {
-      alert("이름을 3글자 이상 입력해주세요");
+      alert("닉네임을 3글자 이상 입력해주세요");
     } else if (!isNaN(tmp.password) || tmp.password.length < 8) {
       alert("비밀번호는 영문, 영문+숫자 8자리 이상입니다.");
     } else {
@@ -39,11 +39,11 @@ class Signup extends Component {
         />
         <div className="form">
           <div className="form-section">
-            <span className="label">이름</span>
+            <span className="label">닉네임</span>
             <input
               type="text"
               onChange={this.inputInfo("nickname")}
-              placeholder="이름을 입력해주세요: 3글자 이상"
+              placeholder="닉네임을 입력해주세요: 3글자 이상"
             />
           </div>
           <div className="form-section">
