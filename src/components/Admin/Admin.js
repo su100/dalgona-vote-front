@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Switch } from "@material-ui/core";
 
-import AddModal from "components/common/AddModal";
+import ContentsModal from "components/common/ContentsModal";
 import Intro from "components/common/Intro";
 import VoteLine from "components/common/VoteLine";
 import Progress from "components/common/Progress";
@@ -11,31 +11,37 @@ class Admin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModal: false,
       ongoing: true,
-      addOngoing: true,
-      editName: "",
-      editOngoing: true,
       votename: "",
+      addOngoing: true,
       isEdit: false,
       editId: 0,
+      editName: "",
+      editOngoing: true,
+      isModal: false,
+      modalType: "",
+      editContents: {},
     };
   }
 
-  openModal = () => {
-    //addmodal 열기
-    this.setState({ isModal: true });
+  openModal = (type) => { 
+    this.setState({ isModal: true, modalType: type });
   };
 
   closeModal = () => {
     //addmodal 닫기
-    this.setState({ isModal: false });
+    this.setState({ isModal: false, modalType: "" });
   };
 
   openAddModal = (e) => {
-    //투표 추가버튼 눌렀을 때
+    //투표 항목 추가버튼 눌렀을 때
     this.setState({ boardId: e.target.value });
-    this.openModal();
+    this.openModal("add");
+  };
+
+  openEditModal = (contents) => {
+    this.setState({ editContents: contents });
+    this.openModal("edit");
   };
 
   ongoingClick = (type) => {
@@ -192,6 +198,8 @@ class Admin extends Component {
                     </Grid>
                     <Grid item>
                       <VoteLine
+                        setContents={this.setContents}
+                        openEditModal={this.openEditModal}
                         contents={vote.get("contents")}
                         ongoing={this.state.ongoing}
                       />
@@ -268,7 +276,11 @@ class Admin extends Component {
         </Grid>
 
         {this.state.isModal && (
-          <AddModal
+          <ContentsModal
+            updateVoteContents={this.props.updateVoteContents}
+            deleteVoteContents={this.props.deleteVoteContents}
+            modalType={this.state.modalType}
+            editContents={this.state.editContents}
             boardId={this.state.boardId}
             isEnded={!this.state.ongoing}
             closeModal={this.closeModal}

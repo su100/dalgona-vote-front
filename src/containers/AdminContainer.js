@@ -55,6 +55,26 @@ class AdminContainer extends Component {
     this.getVoteList(isEnded);
   };
 
+  updateVoteContents = async (isEnded, contentsId, formdata) => {
+    const { VoteActions } = this.props;
+    try {
+      await VoteActions.updateVoteContents(contentsId, formdata);
+    } catch (e) {
+      console.log("error log:" + e);
+    }
+    this.getVoteList(isEnded);
+  };
+
+  deleteVoteContents = async (isEnded, contentsId) => {
+    const { VoteActions } = this.props;
+    try {
+      await VoteActions.deleteVoteContents(contentsId);
+    } catch (e) {
+      console.log("error log:" + e);
+    }
+    this.getVoteList(isEnded);
+  };
+
   componentDidMount() {
     if (!this.props.isAuthenticated) {
       //권한 없을 때 접근하면 로그인 페이지
@@ -67,18 +87,22 @@ class AdminContainer extends Component {
       this.getVoteList(0);
     }
   }
-
   render() {
-    const { loading, votelist } = this.props;
+    const { isModal, modalType, loading, votelist } = this.props;
     return (
       <Admin
         loading={loading}
         votelist={votelist}
+        isModal={isModal}
+        modalType={modalType}
+        setModal={this.props.VoteActions.setModal}
         postVoteBoard={this.postVoteBoard}
         getVoteList={this.getVoteList}
         updateVoteBoard={this.updateVoteBoard}
         deleteVoteBoard={this.deleteVoteBoard}
         postVoteContents={this.postVoteContents}
+        updateVoteContents={this.updateVoteContents}
+        deleteVoteContents={this.deleteVoteContents}
       />
     );
   }
@@ -89,6 +113,8 @@ export default connect(
     loading: state.pender.pending["vote/LIST_VOTE_BOARD"],
     isAuthenticated: state.auth.get("isAuthenticated"),
     isAdmin: state.auth.get("isAdmin"),
+    isModal: state.vote.get("isModal"),
+    modalType: state.vote.get("modalType"),
     votelist: state.vote.get("votelist"),
   }),
   (dispatch) => ({

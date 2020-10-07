@@ -125,7 +125,8 @@ export default handleActions(
         return state.set("isAuthenticated", false);
       },
       onFailure: (state, action) => {
-        alert(action.payload.data);
+        alert("문제가 발생했습니다");
+        console.log(action.payload.response.data);
         return state;
       },
     }),

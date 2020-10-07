@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import { Grid } from "@material-ui/core";
-import "./AddModal.scss";
+import "./ContentsModal.scss";
 
 import addpic from "images/addpic.png";
 
-function Addmodal({ isEnded, boardId, closeModal, postVoteContents }) {
+function ContentsModal({
+  modalType,
+  editContents,
+  isEnded,
+  boardId,
+  closeModal,
+  postVoteContents,
+  updateVoteContents,
+  deleteVoteContents,
+}) {
   const [img, setImage] = useState(null);
-  const [name, setName] = useState("");
-  const [previewURL, setPreview] = useState("");
+  const [name, setName] = useState(
+    modalType === "add" ? "" : editContents.title
+  );
+  const [previewURL, setPreview] = useState(
+    modalType === "add" ? "" : editContents.image
+  );
 
   let fileInput = React.createRef();
 
@@ -45,8 +58,28 @@ function Addmodal({ isEnded, boardId, closeModal, postVoteContents }) {
     }
   };
 
+  const updateContents = () => {
+    console.log(img);
+    if (name === "") {
+      alert("이름을 입력해주세요");
+    } else {
+      const formData = new FormData();
+      formData.append("title", name);
+      if (img) formData.append("image", img);
+      updateVoteContents(isEnded, editContents.id, formData);
+      closeModal();
+    }
+  };
+
+  const deleteContents = () => {
+    if (window.confirm("항목을 삭제하시겠습니까?")) {
+      deleteVoteContents(isEnded, editContents.id);
+      closeModal();
+    }
+  };
+
   return (
-    <div className="add-modal">
+    <div className="contents-modal">
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid
           item
@@ -81,15 +114,20 @@ function Addmodal({ isEnded, boardId, closeModal, postVoteContents }) {
           </div>
           <div className="name">
             <span className="label">이름</span>
-            <input type="text" onChange={onChangeName} />
+            <input type="text" value={name} onChange={onChangeName} />
           </div>
         </Grid>
         <Grid item className="button-area">
-          <button className="cancel-button" onClick={closeModal}>
-            취소
-          </button>
-          <button className="post-button" onClick={postContents}>
-            추가
+          {modalType === "edit" && (
+            <button className="delete-button" onClick={deleteContents}>
+              삭제
+            </button>
+          )}
+          <button
+            className="post-button"
+            onClick={modalType === "add" ? postContents : updateContents}
+          >
+            {modalType === "add" ? "추가" : "수정"}
           </button>
         </Grid>
       </Grid>
@@ -97,4 +135,4 @@ function Addmodal({ isEnded, boardId, closeModal, postVoteContents }) {
   );
 }
 
-export default Addmodal;
+export default ContentsModal;

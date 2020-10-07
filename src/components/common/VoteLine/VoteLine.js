@@ -4,9 +4,7 @@ import { Grid } from "@material-ui/core";
 import crown from "images/crown.png";
 import "./VoteLine.scss";
 
-function VoteLine({ isMy, contents, ongoing }) {
-  const name1 = contents.length > 0 ? contents[0].title : "항목 없음";
-  const name2 = contents.length === 2 ? contents[1].title : "항목 없음";
+function VoteLine({ openEditModal, isMy, contents, ongoing }) {
   const count1 = contents.length > 0 ? contents[0].voter_count : 0;
   const count2 = contents.length === 2 ? contents[1].voter_count : 0;
 
@@ -29,6 +27,10 @@ function VoteLine({ isMy, contents, ongoing }) {
     }
   }
 
+  function openModal(e) {
+    openEditModal(contents[e.currentTarget.value]);
+  }
+
   return (
     <div className={isMy ? "my-voteline voteline" : "voteline"}>
       {ongoing ? (
@@ -44,13 +46,41 @@ function VoteLine({ isMy, contents, ongoing }) {
                 <span className="star">★</span>
                 {count1}
               </div>
-              <div className="name">{name1}</div>
+              {contents.length > 0 ? (
+                isMy ? (
+                  <div className="name">{contents[0].title}</div>
+                ) : (
+                  <button
+                    className="name edit-name"
+                    onClick={openModal}
+                    value={0}
+                  >
+                    {contents[0].title}
+                  </button>
+                )
+              ) : (
+                <div className="name">항목 없음</div>
+              )}
             </Grid>
             <Grid item className="vs">
               vs.
             </Grid>
             <Grid item>
-              <div className="name">{name2}</div>
+              {contents.length === 2 ? (
+                isMy ? (
+                  <div className="name"> {contents[1].title}</div>
+                ) : (
+                  <button
+                    className="name edit-name"
+                    onClick={openModal}
+                    value={1}
+                  >
+                    {contents[1].title}
+                  </button>
+                )
+              ) : (
+                <div className="name">항목 없음</div>
+              )}
               <div className="count right">
                 <span className="star">★</span>
                 {count2}
@@ -84,7 +114,21 @@ function VoteLine({ isMy, contents, ongoing }) {
               </Grid>
             )}
             <Grid item className="info">
-              <div className="name">{name1}</div>
+              {contents.length > 0 ? (
+                isMy ? (
+                  <div className="name"> {contents[0].title}</div>
+                ) : (
+                  <button
+                    className="name edit-name"
+                    onClick={openModal}
+                    value={0}
+                  >
+                    {contents[0].title}
+                  </button>
+                )
+              ) : (
+                <div className="name">항목 없음</div>
+              )}
               <div className="count">
                 <span className="star">★</span>
                 {count1}
@@ -96,7 +140,21 @@ function VoteLine({ isMy, contents, ongoing }) {
           </Grid>
           <Grid item container className="luna right">
             <Grid item className="info">
-              <div className="name">{name2}</div>
+              {contents.length === 2 ? (
+                isMy ? (
+                  <div className="name"> {contents[0].title}</div>
+                ) : (
+                  <button
+                    className="name edit-name"
+                    onClick={openModal}
+                    value={1}
+                  >
+                    {contents[1].title}
+                  </button>
+                )
+              ) : (
+                <div className="name">항목 없음</div>
+              )}
               <div className="count">
                 <span className="star">★</span>
                 {count2}

@@ -91,6 +91,16 @@ export const postVoteContents = (formdata) =>
     headers: { Authorization: getAccesesToken() },
   });
 
+export const updateVoteContents = (contentsId, formdata) =>
+  axios.put(`${API_BASE_URL}/voteboard/${contentsId}`, formdata, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
+export const deleteVoteContents = (contentsId) =>
+  axios.delete(`${API_BASE_URL}/voteboard/${contentsId}`, {
+    headers: { Authorization: getAccesesToken() },
+  });
+
 export const postVote = (contentsId) =>
   axios.post(
     `${API_BASE_URL}/voteboard/${contentsId}`,
