@@ -68,7 +68,7 @@ export default handleActions(
         }
         if (data.nickname) {
           if (data.nickname.includes("This field must be unique."))
-            alert("이미 존재하는 이름입니다.");
+            alert("이미 존재하는 닉네임입니다.");
           else alert(data.username);
         }
         if (data.password1) {
@@ -134,14 +134,14 @@ export default handleActions(
       type: UPDATE_USER,
       onSuccess: (state, action) => {
         console.log(action.payload.data);
-        alert(`${action.payload.data.nickname}님 이름이 변경되었습니다.`);
+        alert(`${action.payload.data.nickname}님 닉네임이 변경되었습니다.`);
         return state;
       },
       onFailure: (state, action) => {
         const data = action.payload.response.data;
         if (data.nickname) {
           if (data.nickname.includes("This field must be unique."))
-            alert("이미 존재하는 이름입니다");
+            alert("이미 존재하는 닉네임입니다");
         } else {
           alert("문제가 발생했습니다");
           console.log(data);
