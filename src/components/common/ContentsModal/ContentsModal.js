@@ -89,7 +89,7 @@ function ContentsModal({
           alignItems="center"
         >
           <Grid item className="title">
-            루나 추가하기
+            항목 {modalType==="add"?"추가":"수정"}하기
           </Grid>
           <Grid item className="close-button">
             <button onClick={closeModal}>X</button>
