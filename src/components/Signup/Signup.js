@@ -43,15 +43,14 @@ class Signup extends Component {
             <input
               type="text"
               onChange={this.inputInfo("nickname")}
-              placeholder="닉네임을 입력해주세요: 3글자 이상"
+              placeholder="3글자 이상"
             />
           </div>
           <div className="form-section">
             <div>
               <span className="label">아이디</span>
               <input
-                type="text"
-                placeholder="아이디를 입력해주세요"
+                type="text" 
                 onChange={this.inputInfo("username")}
               />
             </div>
@@ -59,7 +58,7 @@ class Signup extends Component {
               <span className="label">패스워드</span>
               <input
                 type="password"
-                placeholder="패스워드를 입력해주세요: 영문,영문+숫자 8자리 이상"
+                placeholder="영문,영문+숫자 8자리 이상"
                 onChange={this.inputInfo("password")}
               />
             </div>
