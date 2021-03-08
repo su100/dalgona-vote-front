@@ -4,9 +4,11 @@
 <br>
 <br>
   
-- 진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 반응형 웹 사이트 
+<ul>
+  <li>진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 반응형 웹 사이트</li>
+</ul>
 <table>
-  <tr><td>메인페이지</td><td>메인페이지(모바일)</td><td>마이페이지</td></tr>
+  <tr><td>메인페이지</td><td>메인(모바일)</td><td>마이페이지</td></tr>
   <tr><td>
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/></td>
     <td>
@@ -15,7 +17,10 @@
 <img alt="my" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/my02.PNG?raw=true"/></td></tr>
   </table>
 <br>
-- 관리자일 때 투표 추가 및 수정,삭제 가능
+
+<ul>
+  <li>관리자일 때 투표 추가 및 수정,삭제 가능</li>
+</ul>
 <table>
   <tr><td>관리자페이지</td><td>관리자페이지(투표 추가)</td><td>항목 추가/수정 modal</td</tr>
   <tr><td><img alt="admin" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin01.PNG?raw=true"/></td><td><img alt="admin" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/></td><td><img alt="modal" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote03.PNG?raw=true"/></td></tr>
