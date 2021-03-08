@@ -8,12 +8,16 @@
 <br><br><br>
   
 <table>
-  <tr><td>메인페이지</td><td>마이페이지</td><td>관리자페이지</td><td></td></tr>
+  <tr><td>메인페이지</td><td>마이페이지</td>></tr>
   <tr><td>
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/></td><td>
-<img alt="my" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/my02.PNG?raw=true"/></td><td><img alt="admin" style="width:500px" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/></td><td></td></tr>
+<img alt="my" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/my02.PNG?raw=true"/></td></tr>
   </table>
 
+<table>
+  <tr><td>관리자페이지</td><td>항목 추가/수정 modal</td</tr>
+  <tr><td><img alt="admin" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/></td><td><img alt="modal" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote03.PNG?raw=true"/></td></tr>
+  </table>
 
 <p>
 <h2>기술스택</h2>
