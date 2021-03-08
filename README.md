@@ -1,6 +1,6 @@
 
 <h1>1 vs 1 투표사이트</h1>   
-주소: (나중에 넣기) 
+주소: https://su100.github.io/dalgona-vote-front/ 
 <br>
 <br>
   
