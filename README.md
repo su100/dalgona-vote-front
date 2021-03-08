@@ -1,6 +1,7 @@
 
 <h1>1 vs 1 투표사이트</h1>   
 주소: https://su100.github.io/dalgona-vote-front/ 
+-> 외관만 갖춘 상태, 제대로 보려면 백엔드 프로젝트와 함께 실행해야 함
 <br>
 <br>
   
