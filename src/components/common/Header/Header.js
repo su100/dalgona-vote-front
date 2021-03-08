@@ -31,6 +31,7 @@ class Header extends Component {
     } else {
       return (
         <Grid container justify="flex-end" className="menu">
+          
           <Grid item>
             <Link className={path === "/login" ? "active" : ""} to="/login">
               로그인
@@ -39,6 +40,16 @@ class Header extends Component {
           <Grid item>
             <Link className={path === "/signup" ? "active" : ""} to="/signup">
               회원가입
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link className={path === "/my" ? "active" : ""} to="/my">
+              마이페이지
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link className={path === "/admin" ? "active" : ""} to="/admin">
+              관리자페이지
             </Link>
           </Grid>
         </Grid>

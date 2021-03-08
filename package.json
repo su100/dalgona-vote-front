@@ -20,7 +20,7 @@
         "redux-actions": "^2.6.5",
         "redux-pender": "^2.0.12"
     },
-    "homepage": "https://su100.github.io/dalgona-vote-front",
+    "homepage": "https://su100.github.io",
     "scripts": {
         "start": "cross-env NODE_PATH=src react-scripts start",
         "build": "cross-env NODE_PATH=src react-scripts build",

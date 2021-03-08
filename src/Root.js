@@ -11,7 +11,7 @@ const store = configure();
 const Root = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/dalgona-vote-front">
         <ScrollToTop>
           <Route path="/" component={App} />
         </ScrollToTop>
