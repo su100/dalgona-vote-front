@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.02ef8f88.chunk.css",
-    "main.js": "/static/js/main.38dda794.chunk.js",
-    "main.js.map": "/static/js/main.38dda794.chunk.js.map",
+    "main.js": "/static/js/main.395271b0.chunk.js",
+    "main.js.map": "/static/js/main.395271b0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2c819c94.js",
     "runtime-main.js.map": "/static/js/runtime-main.2c819c94.js.map",
-    "static/js/2.b652f76b.chunk.js": "/static/js/2.b652f76b.chunk.js",
-    "static/js/2.b652f76b.chunk.js.map": "/static/js/2.b652f76b.chunk.js.map",
+    "static/js/2.a297fa45.chunk.js": "/static/js/2.a297fa45.chunk.js",
+    "static/js/2.a297fa45.chunk.js.map": "/static/js/2.a297fa45.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.34ea7fd01e830b651f981e50774e16b3.js": "/precache-manifest.34ea7fd01e830b651f981e50774e16b3.js",
+    "precache-manifest.d4d16ed62daf5e33f980c0c4fc9ad102.js": "/precache-manifest.d4d16ed62daf5e33f980c0c4fc9ad102.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.02ef8f88.chunk.css.map": "/static/css/main.02ef8f88.chunk.css.map",
-    "static/js/2.b652f76b.chunk.js.LICENSE.txt": "/static/js/2.b652f76b.chunk.js.LICENSE.txt",
+    "static/js/2.a297fa45.chunk.js.LICENSE.txt": "/static/js/2.a297fa45.chunk.js.LICENSE.txt",
     "static/media/crown.png": "/static/media/crown.7588aad3.png",
     "static/media/moon.png": "/static/media/moon.37a8df57.png",
     "static/media/오마이걸.png": "/static/media/오마이걸.74814840.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2c819c94.js",
-    "static/js/2.b652f76b.chunk.js",
+    "static/js/2.a297fa45.chunk.js",
     "static/css/main.02ef8f88.chunk.css",
-    "static/js/main.38dda794.chunk.js"
+    "static/js/main.395271b0.chunk.js"
   ]
 }
