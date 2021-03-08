@@ -9,7 +9,7 @@
   <tr><td>메인페이지</td><td>메인페이지(모바일)</td><td>마이페이지</td></tr>
   <tr><td>
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/></td>
-    <td><td>
+    <td>
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home_m.PNG?raw=true"/></td>
     <td>
 <img alt="my" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/my02.PNG?raw=true"/></td></tr>
