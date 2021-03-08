@@ -1,12 +1,18 @@
 
 <h1>1vs1 투표사이트</h1> 
-진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트<br>
+
+진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트
+
+
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/>
 
 관리자일 때 투표 추가 및 수정,삭제 가능<br>
-<img alt="admin" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/>
+<img alt="admin" style="width:500px" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/>
 <br>
 주소: (나중에 넣기)
+
+
+
 
 <p>
 <h2>기술스택</h2>
