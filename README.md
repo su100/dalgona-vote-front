@@ -1,9 +1,10 @@
 
 <h1>1vs1 투표사이트</h1>   
-<h5>진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트</h5>
+<h3>진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트</h3>
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/>
+<img alt="my" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/my02.PNG?raw=true"/>
 
-<h5>관리자일 때 투표 추가 및 수정,삭제 가능</h5>
+<h3>관리자일 때 투표 추가 및 수정,삭제 가능</h3>
 <img alt="admin" style="width:500px" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/>
 <br>
 주소: (나중에 넣기)
@@ -28,10 +29,12 @@
 <br>
 <br>
 <p>
-<h2>환경 구축</h2>
+<h2>실행 방법</h2>
 <ol>
 <li> 패키지 매니저 yarn 설치<br>
 https://classic.yarnpkg.com/en/docs/install#windows-stable</li> 
+<li>프로젝트 폴더로 이동<br>
+$cd dalgona-vote-front</li>
 <li>패키지 설치<br>
 $yarn</li>
 <li>실행<br>
