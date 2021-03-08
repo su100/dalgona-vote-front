@@ -20,8 +20,8 @@ class Login extends Component {
       alert("아이디를 입력해주세요");
     } else if (tmp.password === "") {
       alert("비밀번호를 입력해주세요");
-    } else {
-      this.props.signIn(tmp.username, tmp.password);
+    } else { 
+      // this.props.signIn(tmp.username, tmp.password);
     }
   };
 

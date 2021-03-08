@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Map, List } from "immutable";
 import { Grid } from "@material-ui/core";
 import StarLine from "components/common/StarLine";
 import VoteCard from "components/common/VoteCard";
 import moon from "images/moon.png";
+import cheongha from 'images/청하.png'
+import ohmygirl from 'images/오마이걸.png'
 import "./Home.scss";
 
 class Home extends Component {
@@ -10,6 +13,99 @@ class Home extends Component {
     super(props);
     this.state = {
       ongoing: true,
+      nowhot:{
+        title:'여름하면 떠오르는 아이돌은?',
+        isVoted: true,
+        isEnded: false,
+        winner_id: [1],
+        contents:[
+          {
+            id:0,
+            image:ohmygirl,
+            title:'오마이걸',
+            voter_count:8,
+            voted:false,
+          },
+          {
+            id:1,
+            image:cheongha,
+            title:'청하',
+            voter_count:13,
+            voted:true,
+          }
+        ]
+      },
+      votelist:List([
+        Map({
+          id:0,
+          title:'여름하면 떠오르는 아이돌은?',
+          isVoted: true,
+          isEnded: false,
+          winner_id: [1],
+          contents:[
+            {
+              id:0,
+              image:ohmygirl,
+              title:'오마이걸',
+              voter_count:8,
+              voted:false,
+            },
+            {
+              id:1,
+              image:cheongha,
+              title:'청하',
+              voter_count:13,
+              voted:true,
+            }
+          ]
+        }),
+        Map({
+          id:1,
+          title:'여름하면 떠오르는 아이돌은?',
+          isVoted: true,
+          isEnded: false,
+          winner_id: [1],
+          contents:[
+            {
+              id:0,
+              image:ohmygirl,
+              title:'오마이걸',
+              voter_count:8,
+              voted:false,
+            },
+            {
+              id:1,
+              image:cheongha,
+              title:'청하',
+              voter_count:13,
+              voted:true,
+            }
+          ]
+        }),
+        Map({
+          id:2,
+          title:'여름하면 떠오르는 아이돌은?',
+          isVoted: true,
+          isEnded: false,
+          winner_id: [1],
+          contents:[
+            {
+              id:0,
+              image:ohmygirl,
+              title:'오마이걸',
+              voter_count:8,
+              voted:false,
+            },
+            {
+              id:1,
+              image:cheongha,
+              title:'청하',
+              voter_count:13,
+              voted:true,
+            }
+          ]
+        }),
+      ])
     };
   }
 
@@ -19,7 +115,14 @@ class Home extends Component {
   };
 
   render() {
-    const { isAuthenticated, nowhot, votelist, postVote } = this.props;
+    const { isAuthenticated, postVote } = this.props;
+    let {nowhot, votelist} = this.props;
+    if(Object.keys(nowhot).length === 0){
+      nowhot=this.state.nowhot;
+    }
+    if(votelist.size === 0){
+      votelist=this.state.votelist
+    }
     return (
       <div className="home">
         <div className="section home-intro">

@@ -47,13 +47,13 @@ class MyContainer extends Component {
     }
   };
   componentDidMount() {
-    if (!this.props.isAuthenticated) {
-      //권한 없을 때 접근하면 로그인 페이지
-      alert("로그인이 필요합니다");
-      this.props.history.push("/login");
-    } else {
-      this.getVoteList(0);
-    }
+    // if (!this.props.isAuthenticated) {
+    //   //권한 없을 때 접근하면 로그인 페이지
+    //   alert("로그인이 필요합니다");
+    //   this.props.history.push("/login");
+    // } else {
+    //   this.getVoteList(0);
+    // }
   }
 
   render() {

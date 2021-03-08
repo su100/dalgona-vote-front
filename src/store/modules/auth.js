@@ -124,9 +124,8 @@ export default handleActions(
         alert("회원 탈퇴 되었습니다");
         return state.set("isAuthenticated", false);
       },
-      onFailure: (state, action) => {
-        alert("문제가 발생했습니다");
-        console.log(action.payload.response.data);
+      onFailure: (state, action) => { 
+        console.log(action.payload.response);
         return state;
       },
     }),

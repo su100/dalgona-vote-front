@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Map, List } from "immutable";
 import Intro from "components/common/Intro";
 import VoteLine from "components/common/VoteLine";
 import Progress from "components/common/Progress";
 import { Grid, Tab, Tabs } from "@material-ui/core";
+import cheongha from 'images/청하.png'
+import ohmygirl from 'images/오마이걸.png'
 import "./My.scss";
 
 class My extends Component {
@@ -14,6 +17,77 @@ class My extends Component {
       nickname: "",
       password1: "",
       password2: "",
+      votelist:List([
+        Map({
+          id:0,
+          title:'여름하면 떠오르는 아이돌은?',
+          isVoted: true,
+          isEnded: false,
+          winner_id: [1],
+          contents:[
+            {
+              id:0,
+              image:ohmygirl,
+              title:'오마이걸',
+              voter_count:8,
+              voted:false,
+            },
+            {
+              id:1,
+              image:cheongha,
+              title:'청하',
+              voter_count:13,
+              voted:true,
+            }
+          ]
+        }),
+        Map({
+          id:1,
+          title:'여름하면 떠오르는 아이돌은?',
+          isVoted: true,
+          isEnded: false,
+          winner_id: [1],
+          contents:[
+            {
+              id:0,
+              image:ohmygirl,
+              title:'오마이걸',
+              voter_count:8,
+              voted:false,
+            },
+            {
+              id:1,
+              image:cheongha,
+              title:'청하',
+              voter_count:13,
+              voted:true,
+            }
+          ]
+        }),
+        Map({
+          id:2,
+          title:'여름하면 떠오르는 아이돌은?',
+          isVoted: true,
+          isEnded: false,
+          winner_id: [1],
+          contents:[
+            {
+              id:0,
+              image:ohmygirl,
+              title:'오마이걸',
+              voter_count:8,
+              voted:false,
+            },
+            {
+              id:1,
+              image:cheongha,
+              title:'청하',
+              voter_count:13,
+              voted:true,
+            }
+          ]
+        }),
+      ])
     };
   }
 
@@ -53,7 +127,7 @@ class My extends Component {
   };
 
   render() {
-    const { votelist } = this.props;
+    const { votelist } = this.state;
     const { tab } = this.state;
     return (
       <div className="my">
