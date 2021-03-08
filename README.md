@@ -1,7 +1,7 @@
 
 <h1>1vs1 투표사이트</h1> 
 
-<br><br>
+<br>
 
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/>
 <h5>진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트</h5>
