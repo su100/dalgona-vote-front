@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3bf62764a537ccf56b42a4859cec19c0",
+    "revision": "68c222196fa5804c910075ad9346d706",
     "url": "/dalgona-vote-front/index.html"
   },
   {
-    "revision": "8f83cee695821c951ed1",
+    "revision": "08b9d4968fc57786e736",
     "url": "/dalgona-vote-front/static/css/main.02ef8f88.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dalgona-vote-front/static/js/2.b652f76b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f83cee695821c951ed1",
-    "url": "/dalgona-vote-front/static/js/main.8d54bc92.chunk.js"
+    "revision": "08b9d4968fc57786e736",
+    "url": "/dalgona-vote-front/static/js/main.38dda794.chunk.js"
   },
   {
     "revision": "ea1d26b52e3519044523",
