@@ -1,13 +1,13 @@
 
 <h1>1vs1 투표사이트</h1>   
--진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트 
+- 진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트 
 <br>
--관리자일 때 투표 추가 및 수정,삭제 가능
+- 관리자일 때 투표 추가 및 수정,삭제 가능
 <br>
 주소: (나중에 넣기)
 <br><br><br>
   
-<table>
+<table style="width:200px">
   <tr><td>메인페이지</td><td>마이페이지</td>></tr>
   <tr><td>
 <img alt="home" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/home.PNG?raw=true"/></td><td>
