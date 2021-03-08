@@ -2,6 +2,7 @@
 <h1>1vs1 투표사이트</h1> 
 진행 중인 투표에 투표하고 마이페이지에서 나의 투표를 확인할 수 있는 사이트<br>
 관리자일 때 투표 추가 및 수정,삭제 가능<br>
+<img alt="admin" src="https://github.com/su100/dalgona-vote-front/blob/master/assets/admin-new-vote01.PNG?raw=true"/>
 <br>
 주소: (나중에 넣기)
 
@@ -29,12 +30,12 @@ $yarn
 $yarn start
 
 <h2>프로젝트 참여자</h2>
-👤김수연(프론트엔드)
-Github : <a href="https://github.com/su100/dalgona-vote-front">https://github.com/su100/dalgona-vote-front</a>
+👤김수연(프론트엔드)<br>
+Github : https://github.com/su100/dalgona-vote-front <br>
 
-👤이창우(백엔드)
-Github : <a href="https://github.com/cwadven/encod_vote_system">https://github.com/cwadven/encod_vote_system</a>
+👤이창우(백엔드)<br>
+Github : https://github.com/cwadven/encod_vote_system <br>
 
-김가영(디자이너)
-Github : https://github.com/joanna-hash
-Tool : Figma
+김가영(디자이너)<br>
+Github : https://github.com/joanna-hash <br>
+Tool : Figma <br>
